@@ -13,7 +13,7 @@
 .container>header h1,
 .container>header h2 {
     color: #fff;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .cs-text {
@@ -29,7 +29,8 @@
 }
 
 .cs-text-cut {
-    width: fit-content;
+    width: 100%;
+    height: 100;
     font-size: 95px;
     overflow: hidden;
     -webkit-transition: all 0.4s ease-in-out;
@@ -38,28 +39,30 @@
     -ms-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
     /* line-height: 180px; */
-    color: rgb(131, 30, 4);
+    color: rgb(73, 22, 1);
     text-transform: uppercase;
     /* text-align: center; */
-    /* margin-top: 6px; */
+    /* margin-top: -110px; */
     font-family: sans-serif;
 }
 
 .cs-text-cut:first-child {
-    border-top: 2px solid rgba(128, 80, 18, 0.055);
+    border-top: 2px solid rgba(128, 80, 18, 0.5);
 }
 
 .cs-text-cut:last-child {
-    border-bottom: 2px solid rgba(128, 80, 18, 0.055);
+    border-bottom: 2px solid rgba(128, 80, 18, 0.5);
 }
 
 .cs-text-cut span {
     display: block;
-    line-height: 120px;
+    line-height: 180px;
     color: rgb(155, 53, 27, 1);
-    font-size: 120px;
-    font-weight: 100;
+    font-size: 180px;
+    font-weight: 400;
     text-transform: uppercase;
+    text-align: center;
+    margin-top: -51%;
     text-shadow: 4px 2px 0 rgba(161, 77, 20, 0.5);
 }
 
@@ -68,7 +71,7 @@
 }
 
 .cs-text-mid {
-    font-family: 'Raleway', serif;
+    font-family: sans-serif;
     font-weight: 400;
     width: 20px;
     text-transform: uppercase;
@@ -78,8 +81,8 @@
     position: absolute;
     text-align: center;
     text-justify: inter-ideograph;
-    top: 29%;
-    margin-top: 44px;
+    top: 60%;
+    margin-top: -20px;
     margin-left: 5%;
     color: rgba(41, 27, 27, 0.4);
     text-shadow: 2px 0px 0 rgba(73, 22, 1, 0.9);
@@ -97,20 +100,20 @@
 }
 
 .cs-text:hover .cs-text-cut:first-child {
-    -webkit-transform: translateY(-55px);
-    -moz-transform: translateY(-55px);
-    -o-transform: translateY(-55px);
-    -ms-transform: translateY(-55px);
-    transform: translateY(-55px);
+    -webkit-transform: translateY(-25px);
+    -moz-transform: translateY(-25px);
+    -o-transform: translateY(-25px);
+    -ms-transform: translateY(-25px);
+    transform: translateY(-25px);
     opacity: 0.5;
 }
 
 .cs-text:hover .cs-text-cut:last-child {
-    -webkit-transform: translateY(55px);
-    -moz-transform: translateY(55px);
-    -o-transform: translateY(55px);
-    -ms-transform: translateY(55px);
-    transform: translateY(55px);
+    -webkit-transform: translateY(25px);
+    -moz-transform: translateY(25px);
+    -o-transform: translateY(25px);
+    -ms-transform: translateY(25px);
+    transform: translateY(25px);
     opacity: 0.5;
 }
 
@@ -245,6 +248,14 @@ a {
     margin-top: 0px;
     margin-left: 10%;
     position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.mainf {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .practicas {
@@ -390,4 +401,17 @@ a {
 .no-csstransforms3d .support-note span.no-csstransforms3d,
 .no-csstransitions .support-note span.no-csstransitions {
     display: block;
+}
+
+
+/* Header */
+
+.large-header {
+    position: absolute;
+    width: 50%;
+    background: #333;
+    overflow: hidden;
+    /* background-size: 200px; */
+    background-position: bottom;
+    z-index: 1;
 }
