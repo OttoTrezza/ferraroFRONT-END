@@ -1,11 +1,9 @@
-* {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-
-/* Header */
+/* body {
+    background: #ddd url(assets/images/field.jpg) no-repeat right;
+    -webkit-background-size: fit-content;
+    -moz-background-size: fit-content;
+    background-size: 65% 170%;
+} */
 
 .large-header {
     background: #ddd url(assets/images/field.jpg) no-repeat right;
