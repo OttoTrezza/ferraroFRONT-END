@@ -39,7 +39,7 @@
 }
 
 .cs-text-cut:first-child {
-    border-top: 2px solid rgba(128, 80, 18, 0.5);
+    border-top: 2px solid rgba(75, 10, 150, 0.5);
 }
 
 .cs-text-cut:last-child {
