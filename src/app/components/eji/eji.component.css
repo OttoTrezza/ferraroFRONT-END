@@ -1,8 +1,11 @@
-body {
-    background: #ddd url(../../../assets/images/field.jpg) no-repeat top left;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
+.large-header {
+    position: relative;
+    width: 50%;
+    background: darkblue;
+    overflow: hidden;
     background-size: cover;
+    background-position: right;
+    z-index: 1;
 }
 
 .container>header h1,
