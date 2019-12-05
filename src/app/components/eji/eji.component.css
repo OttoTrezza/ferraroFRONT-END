@@ -1,11 +1,19 @@
 .large-header {
-    position: relative;
-    width: 50%;
-    background: darkblue;
+    width: fit-content;
+    margin-top: 0px;
+    /* border-left: 59%; */
+    background: inherit;
     overflow: hidden;
     background-size: cover;
     background-position: right;
     z-index: 1;
+}
+
+body {
+    background: inherit;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 
 .container>header h1,
@@ -53,8 +61,8 @@
     text-transform: uppercase;
     text-align: center;
     margin-top: 6px;
-    font-family: 'Sancreek', cursive;
-    text-shadow: 7px 2px 0 rgba(255, 255, 255, 0.3);
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 7px 2px 0 rgba(112, 16, 16, 0.3);
 }
 
 .cs-text-cut:last-child span {
@@ -72,8 +80,8 @@
     position: absolute;
     top: 30%;
     margin-top: -25px;
-    color: rgba(255, 255, 255, 0.3);
-    text-shadow: 0 0 0 rgba(255, 255, 255, 0.9);
+    color: rgba(66, 2, 18, 0.3);
+    text-shadow: 0 0 0 rgba(70, 4, 37, 0.9);
     opacity: 0;
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
