@@ -1,9 +1,17 @@
+/* 128 fondo primera hoja */
+
+
+/* 385 fondo cuadradito superior y posterior hoja */
+
+
+/* 
 body {
     background: #ddd url(assets/images/justicia.jpg) no-repeat right;
-    width: 100%;
-    height: 1000px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
     background-size: 65% 170%;
-}
+} */
 
 .st-container {
     position: absolute;
@@ -13,6 +21,9 @@ body {
     left: 0;
     font-family: 'Josefin Slab', 'Myriad Pro', Arial, sans-serif;
 }
+
+
+/* Letra de barra de abajo */
 
 .st-container>input,
 .st-container>a {
@@ -25,15 +36,21 @@ body {
     line-height: 34px;
 }
 
+
+/* ]Fondo de barra de abajo hover */
+
 .st-container>input {
     opacity: 0;
     z-index: 1000;
 }
 
+
+/* Fondo de barra de abajo color y pos */
+
 .st-container>a {
     z-index: 10;
     font-weight: 700;
-    background: #3d1616;
+    background: #9b2d3c;
     color: #fff;
     text-align: center;
     text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
@@ -47,7 +64,7 @@ body {
     position: fixed;
     width: 100%;
     height: 34px;
-    background: #35090f;
+    background: #9b2d3c;
     z-index: 9;
     bottom: 0;
 }
@@ -106,7 +123,31 @@ body {
 }
 
 .st-scroll,
-.st-panel {
+.st-panel1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.st-panel2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.st-panel3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.st-panel4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.st-panel5 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -125,8 +166,43 @@ body {
     -webkit-backface-visibility: hidden;
 }
 
-.st-panel {
-    background: #fff;
+.st-panel1 {
+    background: #ddd url(assets/images/justicia.jpg) no-repeat right;
+    width: cover;
+    height: cover;
+    background-size: 65% 170%;
+    overflow: hidden;
+}
+
+.st-panel2 {
+    background: #9b2d3c;
+    width: cover;
+    height: cover;
+    background-size: 65% 70%;
+    overflow: hidden;
+}
+
+.st-panel3 {
+    background: #ddd url(assets/images/accidTrabajo.jpg) no-repeat right;
+    width: cover;
+    height: cover;
+    background-size: 30% 50%;
+    overflow: hidden;
+}
+
+.st-panel4 {
+    background: #9b2d3c;
+    width: cover;
+    height: cover;
+    background-size: 65% 170%;
+    overflow: hidden;
+}
+
+.st-panel5 {
+    background: #ddd url(assets/images/jubilaciones.jpg) no-repeat right;
+    width: cover;
+    height: cover;
+    background-size: cover;
     overflow: hidden;
 }
 
@@ -171,22 +247,7 @@ body {
 }
 
 
-/* Content elements */
-
-.st-deco {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    margin-left: -100px;
-    background: #5f2328;
-    -webkit-transform: translateY(-50%) rotate(45deg);
-    -moz-transform: translateY(-50%) rotate(45deg);
-    -o-transform: translateY(-50%) rotate(45deg);
-    -ms-transform: translateY(-50%) rotate(45deg);
-    transform: translateY(-50%) rotate(45deg);
-}
+/* Content elements El cuadradito de arriba*/
 
 .st-deco1 {
     width: 200px;
@@ -195,7 +256,75 @@ body {
     top: 0px;
     left: 50%;
     margin-left: -100px;
-    background: #5f2328;
+    background: #9b2d3c;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.st-deco2 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -100px;
+    background: #ddd url(assets/images/justicia.jpg) no-repeat right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-size: 65% 170%;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.st-deco3 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -100px;
+    background: #9b2d3c;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.st-deco4 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -100px;
+    background: #ddd url(assets/images/justicia.jpg) no-repeat right;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-size: 65% 170%;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.st-deco5 {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -100px;
+    background: #9b2d3c;
     -webkit-transform: translateY(-50%) rotate(45deg);
     -moz-transform: translateY(-50%) rotate(45deg);
     -o-transform: translateY(-50%) rotate(45deg);
@@ -224,11 +353,11 @@ body {
     transform: rotate(-45deg) translateY(25%);
 }
 
-.st-panel h2 {
-    color: #79071f;
+.st-panel1 h2 {
+    color: #9b2d3c;
     text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
     position: absolute;
-    font-size: 54px;
+    font-size: 90px;
     font-weight: 900;
     width: 80%;
     left: 10%;
@@ -240,7 +369,71 @@ body {
     -webkit-backface-visibility: hidden;
 }
 
-#st-control-1:checked~.st-scroll #st-panel-1 h2,
+.st-panel2 h2 {
+    color: #9b2d3c;
+    text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
+    position: absolute;
+    font-size: 50px;
+    font-weight: 900;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    line-height: 50px;
+    margin: -70px 0 0 0;
+    padding: 0;
+    top: 50%;
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel3 h2 {
+    color: #9b2d3c;
+    text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
+    position: absolute;
+    font-size: 50px;
+    font-weight: 900;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    line-height: 50px;
+    margin: -70px 0 0 0;
+    padding: 0;
+    top: 50%;
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel4 h2 {
+    color: #9b2d3c;
+    text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
+    position: absolute;
+    font-size: 50px;
+    font-weight: 900;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    line-height: 50px;
+    margin: -70px 0 0 0;
+    padding: 0;
+    top: 50%;
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel5 h2 {
+    color: #9b2d3c;
+    text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
+    position: absolute;
+    font-size: 50px;
+    font-weight: 900;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    line-height: 50px;
+    margin: -70px 0 0 0;
+    padding: 0;
+    top: 50%;
+    -webkit-backface-visibility: hidden;
+}
+
+#st-control-1:checked~.st-scroll #st-panel-1 h1,
 #st-control-2:checked~.st-scroll #st-panel-2 h2,
 #st-control-3:checked~.st-scroll #st-panel-3 h2,
 #st-control-4:checked~.st-scroll #st-panel-4 h2,
@@ -307,7 +500,67 @@ body {
     }
 }
 
-.st-panel p {
+.st-panel1 p {
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8b8b8b;
+    z-index: 2;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+    top: 50%;
+    margin: 10px 0 0 0;
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel2 p {
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8b8b8b;
+    z-index: 2;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+    top: 50%;
+    margin: 10px 0 0 0;
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel3 p {
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8b8b8b;
+    z-index: 2;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+    top: 50%;
+    margin: 10px 0 0 0;
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel4 p {
+    position: absolute;
+    text-align: center;
+    font-size: 16px;
+    line-height: 22px;
+    color: #8b8b8b;
+    z-index: 2;
+    padding: 0;
+    width: 50%;
+    left: 25%;
+    top: 50%;
+    margin: 10px 0 0 0;
+    -webkit-backface-visibility: hidden;
+}
+
+.st-panel5 p {
     position: absolute;
     text-align: center;
     font-size: 16px;
@@ -390,32 +643,26 @@ body {
 }
 
 
-/* Colored sections */
+/* Colored sections/El primer cuadradito de arriba */
 
 .st-color,
 .st-deco {
-    background: #ddd url(assets/images/justicia.jpg) no-repeat right;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: 65% 175%;
+    background: #9b2d3c;
 }
 
-.st-color,
-.st-deco1 {
-    background: #ddd url(assets/images/users/3.jpg) no-repeat right;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: 65% 175%;
-}
+
+/* Las letras sobre el cuadradito de arriba */
 
 .st-color [data-icon]:after {
-    color: #692323;
+    color: #9b2d3c;
 }
 
 
-/* .st-color .st-deco {
-    background: rgb(255, 255, 255);
-} */
+/* El siguiente cuadradito de arriba.. su fondo */
+
+.st-color .st-deco {
+    background: rgb(209, 180, 189);
+}
 
 .st-color h2 {
     color: #fff;
@@ -428,6 +675,9 @@ body {
 }
 
 @media screen and (max-width: 520px) {
+    .st-panel h1 {
+        font-size: 90px;
+    }
     .st-panel h2 {
         font-size: 42px;
     }
@@ -445,11 +695,31 @@ body {
     .st-container>a {
         font-size: 10px;
     }
-    .st-deco {
+    .st-deco1 {
         width: 120px;
         height: 120px;
         margin-left: -60px;
     }
+    /* .st-deco2 {
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+    }
+    .st-deco3 {
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+    }
+    .st-deco4 {
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+    }
+    .st-deco5 {
+        width: 120px;
+        height: 120px;
+        margin-left: -60px;
+    } */
     [data-icon]:after {
         font-size: 60px;
         -webkit-transform: rotate(-45deg) translateY(15%);

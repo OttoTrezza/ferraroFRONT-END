@@ -1,18 +1,19 @@
-.main {
+/* .main {
     width: fit-content;
-    margin-left: 30%;
-    margin-top: 200px;
+    height: 180px;
+    margin-top: 170px;
+    margin-left: 40%;
     position: absolute;
-}
+} */
 
-.container>header h1,
-.container>header h2 {
-    color: #fff;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+.main {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
 }
 
 .cs-text {
-    width: 645px;
+    width: 1145px;
     margin: 120px auto 30px;
     cursor: default;
 }
@@ -44,14 +45,14 @@
 .cs-text-cut span {
     display: block;
     line-height: 180px;
-    color: rgba(255, 255, 255, 1);
+    color: rgb(98, 211, 23);
     font-size: 180px;
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
     margin-top: 6px;
     font-family: 'Sancreek', cursive;
-    text-shadow: 7px 2px 0 rgba(255, 255, 255, 0.3);
+    text-shadow: 7px 2px 0 rgba(54, 214, 14, 0.3);
 }
 
 .cs-text-cut:last-child span {
@@ -69,8 +70,8 @@
     position: absolute;
     top: 50%;
     margin-top: -25px;
-    color: rgba(255, 255, 255, 0.3);
-    text-shadow: 0 0 0 rgba(255, 255, 255, 0.9);
+    color: rgba(179, 63, 63, 0.3);
+    text-shadow: 0 0 0 rgba(209, 29, 29, 0.9);
     opacity: 0;
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
