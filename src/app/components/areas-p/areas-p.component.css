@@ -1,15 +1,24 @@
+.test {
+    width: 200px;
+    height: 200px;
+    background: cover;
+    margin: round;
+}
+
 .da-thumbs {
     list-style: none;
-    width: 984px;
-    height: 600px;
+    width: 450px;
+    height: 450px;
     position: relative;
     margin: 20px auto;
+    margin-left: 40px;
+    margin-top: 380px;
     padding: 0;
 }
 
 .da-thumbs li {
     float: left;
-    margin: 5px;
+    margin: 0px;
     background: #fff;
     padding: 8px;
     position: relative;
