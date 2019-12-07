@@ -27,7 +27,7 @@
 
 .cs-text-cut {
     width: 100%;
-    height: 80px;
+    height: 120px;
     overflow: hidden;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
@@ -36,13 +36,15 @@
     transition: all 0.4s ease-in-out;
 }
 
+
+/* 
 .cs-text-cut:first-child {
     border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 .cs-text-cut:last-child {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
+} */
 
 .cs-text-cut span {
     display: block;
@@ -53,8 +55,8 @@
     text-transform: uppercase;
     text-align: center;
     margin-top: 6px;
-    font-family: 'Sancreek', cursive;
-    text-shadow: 7px 2px 0 rgba(39, 2, 7, 0.3);
+    /* font-family: 'Sancreek', cursive;
+    text-shadow: 7px 2px 0 rgba(39, 2, 7, 0.3); */
 }
 
 .cs-text-cut:last-child span {
@@ -62,18 +64,17 @@
 }
 
 .cs-text-mid {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Bitter', 'Myriad Pro', Arial, sans-serif;
+    text-shadow: 7px 2px 0 rgba(161, 34, 51, 0.3);
     font-weight: 100;
     text-transform: uppercase;
-    font-size: 40px;
+    font-size: 70px;
     letter-spacing: 35px;
     line-height: 50px;
     text-indent: 20px;
-    position: relative;
+    position: left;
     top: 50%;
     margin-top: -25px;
-    color: rgba(70, 16, 28, 0.3);
-    text-shadow: 0 0 0 rgba(224, 95, 19, 0.9);
     opacity: 0;
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
@@ -88,20 +89,20 @@
 }
 
 .cs-text:hover .cs-text-cut:first-child {
-    -webkit-transform: translateY(-25px);
-    -moz-transform: translateY(-25px);
-    -o-transform: translateY(-25px);
-    -ms-transform: translateY(-25px);
-    transform: translateY(-25px);
+    -webkit-transform: translateY(-45px);
+    -moz-transform: translateY(-45px);
+    -o-transform: translateY(-45px);
+    -ms-transform: translateY(-45px);
+    transform: translateY(-45px);
     opacity: 0.5;
 }
 
 .cs-text:hover .cs-text-cut:last-child {
-    -webkit-transform: translateY(25px);
-    -moz-transform: translateY(25px);
-    -o-transform: translateY(25px);
-    -ms-transform: translateY(25px);
-    transform: translateY(25px);
+    -webkit-transform: translateY(45px);
+    -moz-transform: translateY(45px);
+    -o-transform: translateY(45px);
+    -ms-transform: translateY(45px);
+    transform: translateY(45px);
     opacity: 0.5;
 }
 
