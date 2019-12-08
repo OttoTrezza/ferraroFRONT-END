@@ -1,14 +1,31 @@
-.test {
-    width: 200px;
+.test1 {
+    width: 280px;
     height: 200px;
-    background: cover;
+    margin: round;
+}
+
+.test2 {
+    width: 350px;
+    height: 200px;
+    margin: round;
+}
+
+.test3 {
+    width: 300px;
+    height: 200px;
+    margin: round;
+}
+
+.test4 {
+    width: 300px;
+    height: 160px;
     margin: round;
 }
 
 .da-thumbs {
     list-style: none;
-    width: 450px;
-    height: 450px;
+    width: 750px;
+    height: 550px;
     position: relative;
     margin: 20px auto;
     margin-left: 40px;
@@ -20,7 +37,7 @@
     float: left;
     margin: 0px;
     background: #fff;
-    padding: 8px;
+    padding: 20px;
     position: relative;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
