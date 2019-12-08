@@ -121,11 +121,11 @@ main {
 }
 
 .st-container>input:hover+a {
-    background: #AD244F;
+    background: rgb(100, 34, 34);
 }
 
 .st-container>input:hover+a:after {
-    border-bottom-color: #AD244F;
+    border-bottom-color: rgb(100, 34, 34);
 }
 
 .st-scroll,
@@ -385,15 +385,21 @@ main {
     height: 400px;
     margin-top: -750px;
     margin-left: 1500px;
-    color: #946b6b;
+    color: #0f0e0e;
     position: center;
     font-size: 20px;
     font-weight: 500;
     line-height: 40px;
     font-family: 'RaphaelIcons';
-    text-shadow: 1px 0px 0 rgba(252, 4, 4, 0.3);
+    text-shadow: 1px 0px 0 rgba(22, 20, 20, 0.3);
     z-index: 9999;
     text-align: center;
+}
+
+.st-panel1 a {
+    color: #070606;
+    font-family: 'RaphaelIcons';
+    text-shadow: 1px 0px 0 rgba(17, 16, 16, 0.3);
 }
 
 .st-panel2 h2 {
