@@ -385,7 +385,7 @@ body {
     height: 400px;
     margin-top: -750px;
     margin-left: 1500px;
-    color: #332222;
+    color: #0f0e0e;
     position: center;
     font-size: 20px;
     font-weight: 500;
@@ -397,9 +397,9 @@ body {
 }
 
 .st-panel1 a {
-    color: #1d1919;
+    color: #070606;
     font-family: 'RaphaelIcons';
-    text-shadow: 1px 0px 0 rgba(59, 53, 53, 0.3);
+    text-shadow: 1px 0px 0 rgba(17, 16, 16, 0.3);
 }
 
 .st-panel2 h2 {
@@ -762,6 +762,9 @@ body {
         transform: rotate(-45deg) translateY(15%);
     }
 }
+
+
+/* Hover Shadow */
 
 @-webkit-keyframes hover {
     50% {
