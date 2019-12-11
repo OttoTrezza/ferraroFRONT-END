@@ -367,7 +367,7 @@ body {
 .st-panel1 h2 {
     color: #9b2d3c;
     position: relative;
-    font-size: 120px;
+    font-size: 5vw;
     font-weight: 900;
     /* width: 80%;
     left: 10%; */
@@ -389,7 +389,7 @@ body {
     margin-left: 75%;
     color: #332222;
     position: center;
-    font-size: 20px;
+    font-size: 1vw;
     font-weight: 500;
     line-height: 40px;
     font-family: 'RaphaelIcons';
