@@ -1,36 +1,36 @@
+.mainty {
+    background: 500px 500px;
+    bottom: 1px;
+}
+
 .test1 {
-    width: 280px;
-    height: 200px;
-    margin: round;
+    width: 150px;
+    height: 150px;
 }
 
 .test2 {
-    width: 350px;
-    height: 200px;
-    margin: round;
+    width: 150px;
+    height: 150px;
 }
 
 .test3 {
-    width: 300px;
-    height: 200px;
-    margin: round;
+    width: 150px;
+    height: 150px;
 }
 
 .test4 {
-    width: 300px;
-    height: 160px;
-    margin: round;
+    width: 150px;
+    height: 150px;
 }
 
 .da-thumbs {
     list-style: none;
-    width: 750px;
-    height: 550px;
+    width: 30%;
+    height: 60%;
     position: relative;
     margin: 20px auto;
-    margin-left: 40px;
-    margin-top: 0px;
-    padding: 0;
+    left: -25%;
+    padding: 2px;
 }
 
 .da-thumbs li {
@@ -50,11 +50,12 @@
 
 .da-thumbs li a {
     overflow: hidden;
+    background: cover;
 }
 
 .da-thumbs li a div {
     position: absolute;
-    background: rgba(75, 75, 75, 0.7);
+    background: rgba(48, 160, 63, 0.7);
     width: 100%;
     height: 100%;
 }

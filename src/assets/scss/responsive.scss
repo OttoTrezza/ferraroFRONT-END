@@ -17,21 +17,24 @@ File: scss
     .campaign {
         height: 365px !important;
     }
-    .website-visitor{
-        height:445px; 
+    .website-visitor {
+        height: 445px;
     }
-    .auto-height{
-        max-height:315px;   
+    .auto-height {
+        max-height: 315px;
     }
 }
+
 @media(max-width:1600px) {
-    .website-visitor{
-        height:333px; 
+    .website-visitor {
+        height: 333px;
     }
-    .auto-height{
-        min-height:240px;   
+    .auto-height {
+        min-height: 240px;
     }
 }
+
+
 /*============================================================== 
  For Laptop & above all (1370px) 
  ============================================================== */
@@ -40,14 +43,13 @@ File: scss
     .widget-app-columns {
         column-count: 2;
     }
-    .website-visitor{
-        height:353px; 
+    .website-visitor {
+        height: 353px;
     }
-    .auto-height{
-        min-height:186px;   
+    .auto-height {
+        min-height: 186px;
     }
 }
-
 
 
 /*-- ============================================================== 
@@ -58,7 +60,6 @@ File: scss
     .page-wrapper {
         margin-left: 240px;
     }
-    
 }
 
 @media(max-width:1023px) {
@@ -66,7 +67,6 @@ File: scss
         margin-left: 70px;
         transition: 0.2s ease-in;
     }
-
     .widget-app-columns {
         column-count: 1;
     }
@@ -94,14 +94,13 @@ File: scss
             }
         }
     }
-    .d-flex{
-        display:block!important; 
-        &.no-block{
-            display:flex!important;
+    .d-flex {
+        display: block!important;
+        &.no-block {
+            display: flex!important;
         }
     }
 }
-
 
 
 /*-- ============================================================== 
@@ -142,7 +141,6 @@ File: scss
         -webkit-flex-wrap: nowrap!important;
     }
 }
-
 
 
 /*-- ============================================================== 
@@ -303,10 +301,11 @@ File: scss
     .chat-list li .chat-content {
         width: calc(100% - 80px);
     }
-    
     /*Calendar*/
-    .fc-toolbar .fc-left, .fc-toolbar .fc-right, .fc-toolbar .fc-center{
-        float:none;
+    .fc-toolbar .fc-left,
+    .fc-toolbar .fc-right,
+    .fc-toolbar .fc-center {
+        float: none;
         display: block;
         text-align: center;
         margin-top: 10px;
