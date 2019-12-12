@@ -408,7 +408,7 @@ body {
     color: #9b2d3c;
     text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
     position: relative;
-    font-size: 50px;
+    font-size: 3vw;
     font-weight: 900;
     width: 80%;
     left: 10%;
@@ -424,7 +424,7 @@ body {
     color: #9b2d3c;
     text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
     position: absolute;
-    font-size: 50px;
+    font-size: 3vw;
     font-weight: 900;
     width: 80%;
     left: 10%;
@@ -440,7 +440,7 @@ body {
     color: #9b2d3c;
     text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
     position: absolute;
-    font-size: 50px;
+    font-size: 3vw;
     font-weight: 900;
     width: 80%;
     left: 10%;
@@ -456,7 +456,7 @@ body {
     color: #9b2d3c;
     text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
     position: absolute;
-    font-size: 50px;
+    font-size: 3vw;
     font-weight: 900;
     width: 80%;
     left: 10%;
@@ -538,7 +538,7 @@ body {
 .st-panel1 p {
     position: absolute;
     text-align: center;
-    font-size: 16px;
+    font-size: 1vw;
     line-height: 22px;
     color: #8b8b8b;
     z-index: 2;
@@ -553,7 +553,7 @@ body {
 .st-panel2 p {
     position: absolute;
     text-align: center;
-    font-size: 16px;
+    font-size: 1vw;
     line-height: 22px;
     color: #8b8b8b;
     z-index: 2;
@@ -568,7 +568,7 @@ body {
 .st-panel3 p {
     position: absolute;
     text-align: center;
-    font-size: 16px;
+    font-size: 1vw;
     line-height: 22px;
     color: #8b8b8b;
     z-index: 2;
@@ -583,7 +583,7 @@ body {
 .st-panel4 p {
     position: absolute;
     text-align: center;
-    font-size: 16px;
+    font-size: 1vw;
     line-height: 22px;
     color: #8b8b8b;
     z-index: 2;
@@ -598,7 +598,7 @@ body {
 .st-panel5 p {
     position: absolute;
     text-align: center;
-    font-size: 16px;
+    font-size: 1vw;
     line-height: 22px;
     color: #8b8b8b;
     z-index: 2;
