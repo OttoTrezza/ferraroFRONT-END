@@ -1,43 +1,43 @@
 .mainty {
-    background: 500px 500px;
+    background: 30% 30%;
     bottom: 1px;
 }
 
 .test1 {
-    width: 150px;
-    height: 150px;
+    width: 50%;
+    height: 50%;
 }
 
 .test2 {
-    width: 150px;
-    height: 150px;
+    width: 50%;
+    height: 50%;
 }
 
 .test3 {
-    width: 150px;
-    height: 150px;
+    width: 50%;
+    height: 50%;
 }
 
 .test4 {
-    width: 150px;
-    height: 150px;
+    width: 50%;
+    height: 50%;
 }
 
 .da-thumbs {
     list-style: none;
-    width: 30%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
     position: relative;
     margin: 20px auto;
     left: -25%;
-    padding: 2px;
+    padding: 0px;
 }
 
 .da-thumbs li {
     float: left;
-    margin: 0px;
+    margin:5px;
     background: #fff;
-    padding: 20px;
+    padding: 8px;
     position: relative;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -50,12 +50,12 @@
 
 .da-thumbs li a {
     overflow: hidden;
-    background: cover;
+    
 }
 
 .da-thumbs li a div {
     position: absolute;
-    background: rgba(48, 160, 63, 0.7);
+    background: rgba(105, 43, 43, 0.7);
     width: 100%;
     height: 100%;
 }
@@ -72,22 +72,22 @@
 /* Initial state classes: */
 
 .da-slideFromTop {
-    left: 0px;
+    left: 0%;
     top: -100%;
 }
 
 .da-slideFromBottom {
-    left: 0px;
+    left: 0%;
     top: 100%;
-}
+} 
 
 .da-slideFromLeft {
-    top: 0px;
+    top: 0%;
     left: -100%;
 }
 
 .da-slideFromRight {
-    top: 0px;
+    top: 0%;
     left: 100%;
 }
 
@@ -95,11 +95,11 @@
 /* Final state classes: */
 
 .da-slideTop {
-    top: 0px;
+    top: 0%;
 }
 
 .da-slideLeft {
-    left: 0px;
+    left: 0%;
 }
 
 .da-thumbs li a div span {
