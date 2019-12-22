@@ -6,19 +6,12 @@
     position: absolute;
 } */
 
-
-/* .main {
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-} */
-
 .cs-text {
     width: 80%;
     margin: 120px auto 30px;
     cursor: default;
     position: center;
-    margin-top: 190px;
+    margin-top: 10vw;
 }
 
 .cs-text>span {

@@ -261,12 +261,12 @@ body {
 /* Content elements El cuadradito de arriba*/
 
 .st-deco1 {
-    width: 200px;
-    height: 200px;
+    width: 14vw;
+    height: 14vw;
     position: absolute;
     top: 0px;
-    left: 50%;
-    margin-left: -100px;
+    margin-left: 43vw;
+    /* margin-left: -100px; */
     background: #9b2d3c;
     -webkit-transform: translateY(-50%) rotate(45deg);
     -moz-transform: translateY(-50%) rotate(45deg);
@@ -276,12 +276,11 @@ body {
 }
 
 .st-deco2 {
-    width: 200px;
-    height: 200px;
+    width: 14vw;
+    height: 14vw;
     position: absolute;
     top: 0px;
-    left: 50%;
-    margin-left: -100px;
+    margin-left: 43vw;
     background: #ddd url(assets/images/justicia.jpg) no-repeat right;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -295,12 +294,11 @@ body {
 }
 
 .st-deco3 {
-    width: 200px;
-    height: 200px;
+    width: 14vw;
+    height: 14vw;
     position: absolute;
     top: 0px;
-    left: 50%;
-    margin-left: -100px;
+    margin-left: 43vw;
     background: #9b2d3c;
     -webkit-transform: translateY(-50%) rotate(45deg);
     -moz-transform: translateY(-50%) rotate(45deg);
@@ -310,12 +308,11 @@ body {
 }
 
 .st-deco4 {
-    width: 200px;
-    height: 200px;
+    width: 14vw;
+    height: 14vw;
     position: absolute;
     top: 0px;
-    left: 50%;
-    margin-left: -100px;
+    margin-left: 43vw;
     background: #ddd url(assets/images/justicia.jpg) no-repeat right;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -329,12 +326,11 @@ body {
 }
 
 .st-deco5 {
-    width: 200px;
-    height: 200px;
+    width: 14vw;
+    height: 14vw;
     position: absolute;
     top: 0px;
-    left: 50%;
-    margin-left: -100px;
+    margin-left: 43vw;
     background: #9b2d3c;
     -webkit-transform: translateY(-50%) rotate(45deg);
     -moz-transform: translateY(-50%) rotate(45deg);
@@ -349,14 +345,14 @@ body {
     color: #fff;
     text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
     position: absolute;
-    width: 200px;
-    height: 200px;
-    line-height: 200px;
+    width: 180px;
+    height: 180px;
+    line-height: 180px;
     text-align: center;
-    font-size: 90px;
-    top: 50%;
-    left: 50%;
-    margin: -100px 0 0 -100px;
+    font-size: 5vw;
+    top: 60%;
+    left: 60%;
+    margin: -110px 0 0 -110px;
     -webkit-transform: rotate(-45deg) translateY(25%);
     -moz-transform: rotate(-45deg) translateY(25%);
     -o-transform: rotate(-45deg) translateY(25%);
@@ -383,13 +379,13 @@ body {
 
 .st-panel1 .clase3 {
     background-attachment: local;
-    width: 300px;
+    width: 20%;
     height: 400px;
-    margin-top: -10%;
-    margin-left: 75%;
+    /* margin-top: 30%;
+    margin-left: 35%; */
     color: #332222;
     position: center;
-    font-size: 1vw;
+    font-size: 1.5vw;
     font-weight: 500;
     line-height: 40px;
     font-family: 'RaphaelIcons';
@@ -728,7 +724,7 @@ body {
 
 @media screen and (max-width: 360px) {
     .st-container>a {
-        font-size: 10px;
+        font-size: 1vw;
     }
     .st-deco1 {
         width: 120px;
@@ -890,4 +886,54 @@ body {
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
+}
+
+.areasP {
+    /* background-color: #2196F3;
+    padding: 20px;
+    float: left; */
+    width: 20%;
+    /* The width is 20%, by default */
+}
+
+.ejiTIT {
+    /* background-color: #2196F3;
+    padding: 20px;
+    float: left; */
+    width: 100%;
+    /* The width is 20%, by default */
+}
+
+.contacto {
+    /* background-color: #2196F3;
+    padding: 20px;
+    float: left; */
+    margin-top: -10%;
+    margin-left: 80%;
+    width: 80%;
+    /* The width is 20%, by default */
+}
+
+.contacto .tel1 .tel2 .tel3 {
+    width: 2%;
+    /* font-size: 6vw; */
+}
+
+@media screen and (max-width:800px) {
+    .areasP,
+    .ejiTIT,
+    .contacto {
+        width: 100%;
+        /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    .areasP {
+        align-self: center;
+        margin-left: 38%;
+    }
+    .ejiTIT {
+        margin-top: 35vw;
+    }
+    .contacto {
+        margin-left: 38%;
+    }
 }
