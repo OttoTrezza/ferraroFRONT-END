@@ -385,7 +385,8 @@ body {
     margin-left: 35%; */
     color: #332222;
     position: center;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
+    font-size-adjust: none;
     font-weight: 500;
     line-height: 40px;
     font-family: 'RaphaelIcons';
@@ -914,8 +915,8 @@ body {
     /* The width is 20%, by default */
 }
 
-.contacto .tel1 .tel2 .tel3 {
-    width: 2%;
+.contacto .clase3 {
+    font-size: 1.3vw;
     /* font-size: 6vw; */
 }
 
@@ -924,6 +925,7 @@ body {
     .ejiTIT,
     .contacto {
         width: 100%;
+        /* font-size: 100vw; */
         /* The width is 100%, when the viewport is 800px or smaller */
     }
     .areasP {
@@ -935,5 +937,9 @@ body {
     }
     .contacto {
         margin-left: 38%;
+    }
+    .contacto .clase3 {
+        font-size: 1.5rem;
+        /* font-size: 6vw; */
     }
 }
