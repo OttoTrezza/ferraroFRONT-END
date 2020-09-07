@@ -114,3 +114,10 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 -10px 0 rgba(255, 255, 255, 0.3);
 }
+
+@media screen and (max-width:500px) {
+    .test1 .test2 .test3 .test4 {
+        width: 100px;
+        height: 100px;
+    }
+}

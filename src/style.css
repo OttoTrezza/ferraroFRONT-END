@@ -178,6 +178,7 @@ body {
     width: cover;
     height: cover;
     background-size: 65% 170%;
+    background-color: white;
     overflow: hidden;
 }
 
@@ -187,7 +188,7 @@ body {
     height: cover;
     overflow: hidden;
     background-image: url(assets/images/accidTrabajo.jpg) no-repeat right;
-    background-size: 65% 70%;
+    background-size: 0% 0%;
     background-position: center;
 }
 
@@ -195,7 +196,7 @@ body {
     background: #ddd url(assets/images/PREVISIONAL.jpg) no-repeat right;
     width: cover;
     height: cover;
-    background-size: 35% 40%;
+    background-size: 0% 0%;
     background-position: right;
     overflow: hidden;
 }
@@ -204,7 +205,7 @@ body {
     background: #9b2d3c;
     width: cover;
     height: cover;
-    background-size: 65% 170%;
+    background-size: 0% 0%;
     overflow: hidden;
 }
 
@@ -212,7 +213,7 @@ body {
     background: #ddd url(assets/images/TRANSITO.jpg) no-repeat right;
     width: 100%;
     height: 100%;
-    background-size: 30% 20%;
+    background-size: 0% 0%;
     background-position: center bottom;
     overflow: hidden;
 }
@@ -377,35 +378,11 @@ body {
     text-shadow: 7px 2px 0 rgba(161, 34, 51, 0.3);
 }
 
-.st-panel1 .clase3 {
-    background-attachment: local;
-    width: 20%;
-    height: 400px;
-    /* margin-top: 30%;
-    margin-left: 35%; */
-    color: #332222;
-    position: center;
-    font-size: 1.5rem;
-    font-size-adjust: none;
-    font-weight: 500;
-    line-height: 40px;
-    font-family: 'RaphaelIcons';
-    text-shadow: 1px 0px 0 rgba(22, 20, 20, 0.3);
-    z-index: 9999;
-    text-align: center;
-}
-
-.st-panel1 a {
-    color: #1d1919;
-    font-family: 'RaphaelIcons';
-    text-shadow: 1px 0px 0 rgba(59, 53, 53, 0.3);
-}
-
 .st-panel2 h2 {
     color: #9b2d3c;
     text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
     position: relative;
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: 900;
     width: 80%;
     left: 10%;
@@ -421,7 +398,7 @@ body {
     color: #9b2d3c;
     text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
     position: absolute;
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: 900;
     width: 80%;
     left: 10%;
@@ -437,7 +414,7 @@ body {
     color: #9b2d3c;
     text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
     position: absolute;
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: 900;
     width: 80%;
     left: 10%;
@@ -453,7 +430,7 @@ body {
     color: #9b2d3c;
     text-shadow: 1px 1px 1px rgba(151, 24, 64, 0.2);
     position: absolute;
-    font-size: 3vw;
+    font-size: 5vw;
     font-weight: 900;
     width: 80%;
     left: 10%;
@@ -550,7 +527,7 @@ body {
 .st-panel2 p {
     position: absolute;
     text-align: center;
-    font-size: 1vw;
+    font-size: 2vw;
     line-height: 22px;
     color: #8b8b8b;
     z-index: 2;
@@ -565,7 +542,7 @@ body {
 .st-panel3 p {
     position: absolute;
     text-align: center;
-    font-size: 1vw;
+    font-size: 2vw;
     line-height: 22px;
     color: #8b8b8b;
     z-index: 2;
@@ -580,7 +557,7 @@ body {
 .st-panel4 p {
     position: absolute;
     text-align: center;
-    font-size: 1vw;
+    font-size: 2vw;
     line-height: 22px;
     color: #8b8b8b;
     z-index: 2;
@@ -595,7 +572,7 @@ body {
 .st-panel5 p {
     position: absolute;
     text-align: center;
-    font-size: 1vw;
+    font-size: 2vw;
     line-height: 22px;
     color: #8b8b8b;
     z-index: 2;
@@ -721,17 +698,41 @@ body {
     .st-container>a {
         font-size: 13px;
     }
+    .st-panel2 p {
+        font-size: 1rem;
+    }
+    .st-panel3 p {
+        font-size: 1rem;
+    }
+    .st-panel4 p {
+        font-size: 1rem;
+    }
+    .st-panel5 p {
+        font-size: 1rem;
+    }
+    .st-panel2 h2 {
+        font-size: 2rem;
+    }
+    .st-panel3 h2 {
+        font-size: 2rem;
+    }
+    .st-panel4 h2 {
+        font-size: 2rem;
+    }
+    .st-panel5 h2 {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 360px) {
-    .st-container>a {
+    /* .st-container>a {
         font-size: 1vw;
-    }
-    .st-deco1 {
+    } */
+    /* .st-deco1 {
         width: 120px;
         height: 120px;
         margin-left: -60px;
-    }
+    } */
     /* .st-deco2 {
         width: 120px;
         height: 120px;
@@ -753,12 +754,12 @@ body {
         margin-left: -60px;
     } */
     [data-icon]:after {
-        font-size: 60px;
-        -webkit-transform: rotate(-45deg) translateY(15%);
-        -moz-transform: rotate(-45deg) translateY(15%);
-        -o-transform: rotate(-45deg) translateY(15%);
-        -ms-transform: rotate(-45deg) translateY(15%);
-        transform: rotate(-45deg) translateY(15%);
+        /* font-size: 60px; */
+        -webkit-transform: rotate(-45deg) translateY(25%);
+        -moz-transform: rotate(-45deg) translateY(25%);
+        -o-transform: rotate(-45deg) translateY(25%);
+        -ms-transform: rotate(-45deg) translateY(25%);
+        transform: rotate(-45deg) translateY(25%);
     }
 }
 
@@ -910,14 +911,9 @@ body {
     padding: 20px;
     float: left; */
     margin-top: -10%;
-    margin-left: 80%;
-    width: 80%;
+    margin-left: 70%;
+    width: 60%;
     /* The width is 20%, by default */
-}
-
-.contacto .clase3 {
-    font-size: 1.3vw;
-    /* font-size: 6vw; */
 }
 
 @media screen and (max-width:800px) {
@@ -936,10 +932,12 @@ body {
         margin-top: 35vw;
     }
     .contacto {
-        margin-left: 38%;
+        text-align: center;
+        margin-left: 2%;
     }
-    .contacto .clase3 {
-        font-size: 1.5rem;
-        /* font-size: 6vw; */
+    .contacto .tel1 .tel2 .tel3 {
+        float: left;
+        width: 30%;
+        font-size: 1.2rem;
     }
 }

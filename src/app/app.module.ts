@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AreasPComponent } from './components/areas-p/areas-p.component';
 import { EjiComponent } from './components/eji/eji.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 
 
 
@@ -13,7 +14,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     AreasPComponent,
     EjiComponent,
-    FooterComponent
+    FooterComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule
