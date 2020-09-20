@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../../models/usuario.model';
 import { UsuarioService, ModalUploadService } from '../../services/service.index';
 
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 
 @Component({
   selector: 'app-usuarios',
@@ -13,28 +13,28 @@ export class UsuariosComponent implements OnInit {
 
 
   usuarios: Usuario[] = [];
-  desde: number = 0;
+  desde = 0;
 
-  salas: any;
-  totalRegistros: number = 0;
-  cargando: boolean = true;
+  salas;
+  totalRegistros = 0;
+  cargando = true;
 
   constructor(
-    public _usuarioService: UsuarioService,
-    public _modalUploadService: ModalUploadService
+    public usuarioservice: UsuarioService,
+    public modaluploadservice: ModalUploadService
   ) { }
 
   ngOnInit() {
     this.cargarUsuarios();
     this.cargarSalasTodas();
-    this._modalUploadService.notificacion
+    this.modaluploadservice.notificacion
           .subscribe( resp => this.cargarUsuarios() );
 
   }
 
 
   cargarUsuarios() {
-    this._usuarioService.cargarUsuarios()
+    this.usuarioservice.cargarUsuarios()
           .subscribe( (resp: any) => {
           this.totalRegistros = resp.total;
           this.usuarios = resp.usuarios;
@@ -42,12 +42,12 @@ export class UsuariosComponent implements OnInit {
     });
   }
   cargarSalasTodas() {
-    this._usuarioService.cargarSalasTodas()
+    this.usuarioservice.cargarSalasTodas()
     .subscribe( (resp: any) => {
     this.salas = resp.sala;
     this.cargando = false;
 });
-console.log('salas Usuario.comp', this.salas);
+    console.log('salas Usuario.comp', this.salas);
   }
 
   buscarUsuario( termino: string) {
@@ -57,7 +57,7 @@ console.log('salas Usuario.comp', this.salas);
     }
     this.cargando = true;
 
-    this._usuarioService.buscarUsuarios( termino )
+    this.usuarioservice.buscarUsuarios( termino )
               .subscribe((usuarios: Usuario[]) => {
                 this.usuarios = usuarios;
                 this.cargando = false;
@@ -66,46 +66,46 @@ console.log('salas Usuario.comp', this.salas);
 
 
   guardarUsuario( usuario: Usuario) {
-      this._usuarioService.actualizarUsuario( usuario )
+      this.usuarioservice.actualizarUsuario( usuario )
             .subscribe();
   }
 
 
   borrarUsuario( usuario: Usuario) {
-    if ( usuario._id === this._usuarioService.usuario._id) {
-      swal('No puede borrar usuario', 'No se puede borrar a si mismo', 'error');
-      return;
+    if ( usuario._id === this.usuarioservice.usuario._id) {
+     console.log('No puede borrar usuario', 'No se puede borrar a si mismo', 'error');
+     return;
     }
-     swal(
+    console.log(
      '¿Esta seguro?',
     'Esta a punto de borrar a ' + usuario.nombre,
     'warning'
     // buttons: true,
     //   dangerMode: true
-    )
-    .then (borrar => {
-      console.log( borrar );
-      if ( borrar ) {
-      this._usuarioService.borrarUsuario( usuario._id)
-            .subscribe( borrado => {
-              console.log( borrado );
-              this.cargarUsuarios();
-            });
-      }
-    });
+    );
+    // .then (borrar => {
+    //   console.log( borrar );
+    //   if ( borrar ) {
+    //   this.usuarioservice.borrarUsuario( usuario._id)
+    //         .subscribe( borrado => {
+    //           console.log( borrado );
+    //           this.cargarUsuarios();
+    //         });
+    //   }
+    // });
   }
 
 
 
   mostrarModal( id: string) {
-    this._modalUploadService.mostrarModal( 'usuarios', id );
+    this.modaluploadservice.mostrarModal( 'usuarios', id );
   }
 
 
 
   cambiarDesde(valor: number ) {
 
-    let desdeu = JSON.parse( localStorage.getItem('desdeu')) + valor;
+    const desdeu = JSON.parse( localStorage.getItem('desdeu')) + valor;
 
     if ( desdeu >= this.totalRegistros) {
       return;
@@ -114,7 +114,7 @@ console.log('salas Usuario.comp', this.salas);
       return;
     }
 
-    this._usuarioService.guardardesdeStorage( desdeu );
+    this.usuarioservice.guardardesdeStorage( desdeu );
     this.cargarUsuarios();
   }
 

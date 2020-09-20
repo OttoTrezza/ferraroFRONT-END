@@ -1,9 +1,3 @@
-<!-- <router-outlet></router-outlet>
-<app-footer></app-footer> -->
-
-
-
-
 <div class="container">
 
     <!-- Codrops top bar -->
@@ -12,77 +6,81 @@
             <strong>&laquo; Previous Demo: </strong>Image Accordion with CSS3
         </a>
         <span class="right">
-                    <a href="http://tympanus.net/codrops/2012/06/12/css-only-responsive-layout-with-smooth-transitions/">
-                        <strong>Back to the Codrops Article</strong>
-                    </a>
-                </span>
+            <a href="http://tympanus.net/codrops/2012/06/12/css-only-responsive-layout-with-smooth-transitions/">
+                <strong>Back to the Codrops Article</strong>
+            </a>
+</span>
         <div class="clr">
 
         </div>
-    </div>
-    <!--/ Codrops top bar -->
 
-    <div class="st-container">
+        <!--/ Codrops top bar -->
 
-        <input type="radio" name="radio-set" checked="checked" id="st-control-1" />
-        <a href="#st-panel-1">HOME</a>
-        <input type="radio" name="radio-set" id="st-control-2" />
-        <a href="#st-panel-2">PAPPO NAPOLITANO</a>
-        <input type="radio" name="radio-set" id="st-control-3" />
-        <a href="#st-panel-3">FREDDY MERCURY</a>
-        <input type="radio" name="radio-set" id="st-control-4" />
-        <a href="#st-panel-4">ASTOR PIAZZOLA</a>
-        <input type="radio" name="radio-set" id="st-control-5" />
-        <a href="#st-panel-5">TCHAYKOVSKY</a>
+        <div class="st-container">
+            <!-- checked="checked" -->
+            <input type="radio" name="radio-set" id="st-control-1" />
+            <a href="#st-panel-1">HOME</a>
+            <input type="radio" name="radio-set" id="st-control-2" />
+            <a href="#st-panel-2">PAPPO NAPOLITANO</a>
+            <input type="radio" name="radio-set" id="st-control-3" />
+            <a href="#st-panel-3">FREDDY MERCURY</a>
+            <input type="radio" name="radio-set" id="st-control-4" />
+            <a href="#st-panel-4">ASTOR PIAZZOLA</a>
+            <input type="radio" name="radio-set" id="st-control-5" />
+            <a href="#st-panel-5">TCHAYKOVSKY</a>
 
-        <div class="st-scroll">
+            <div class="st-scroll">
 
-            <!-- Placeholder text from http://hipsteripsum.me/ -->
+                <!-- Placeholder text from http://hipsteripsum.me/ -->
 
-            <section class="st-panel1" id="st-panel-1">
-                <div class="st-deco1" data-icon="EJI"></div>
-                <!-- <div class="w3-row-padding"> -->
-                <div class="areasP">
-                    <app-areas-p></app-areas-p>
-                </div>
-                <div class="ejiTIT">
-                    <app-eji></app-eji>
-                </div>
-                <div class="contacto">
-                    <app-contacto></app-contacto>
-                </div>
-                <!-- </div> -->
-            </section>
+                <section class="st-panel1" id="st-panel-1">
+                    <div class="st-deco1" data-icon="LC"></div>
+                    <!-- <div class="w3-row-padding"> -->
+                    <div class="areasP">
+                        <app-areas-p></app-areas-p>
+                    </div>
+                    <div class="ejiTIT">
+                        <app-eji></app-eji>
+                    </div>
+                    <div class="contacto">
+                        <app-contacto></app-contacto>
+                    </div>
+                    <!-- </div> -->
+                </section>
 
-            <section class="st-panel2 st-color" id="st-panel-2">
-                <div class="st-deco2" data-icon="S"></div>
-                <h2>PAPPO NAPOLITANO</h2>
-                <p>Fechas. Tarifas. Descuentos. Perfil Artista.
-                </p>
-            </section>
+                <section class="st-panel2 st-color" id="st-panel-2">
+                    <div class="st-deco2" data-icon="P"></div>
+                    <h2>PAPPO NAPOLITANO</h2>
+                    <p>Fechas. Tarifas. Descuentos. Perfil Artista.</p>
+                    <a routerLink="/login" class="btn btn-inverse waves-effect waves-light">Comprar</a>
+                </section>
 
-            <section class="st-panel3" id="st-panel-3">
-                <div class="st-deco3" data-icon="P"></div>
-                <h2>FREDDY MERCURY</h2>
-                <p>Fechas. Tarifas. Descuentos. Perfil Artista.</p>
-            </section>
+                <section class="st-panel3" id="st-panel-3">
+                    <div class="st-deco3" data-icon="F"></div>
+                    <h2>FREDDY MERCURY</h2>
+                    <p>Fechas. Tarifas. Descuentos. Perfil Artista.</p>
+                    <a routerLink="/login" class="btn btn-inverse waves-effect waves-light">Comprar</a>
+                </section>
 
-            <section class="st-panel4 st-color" id="st-panel-4">
-                <div class="st-deco4" data-icon="L"></div>
-                <h2>ASTOR PIAZZOLA</h2>
-                <p>Fechas. Tarifas. Descuentos. Perfil Artista.</p>
-            </section>
+                <section class="st-panel4 st-color" id="st-panel-4">
+                    <div class="st-deco4" data-icon="A"></div>
+                    <h2>ASTOR PIAZZOLA</h2>
+                    <p>Fechas. Tarifas. Descuentos. Perfil Artista.</p>
+                </section>
 
-            <section class="st-panel5" id="st-panel-5">
-                <div class="st-deco5" data-icon="C"></div>
-                <h2>TCHAYKOVSKY</h2>
-                <p>Fechas. Tarifas. Descuentos. Perfil Artista.</p>
-            </section>
+                <section class="st-panel5" id="st-panel-5">
+                    <div class="st-deco5" data-icon="T"></div>
+                    <h2>TCHAYKOVSKY</h2>
+                    <p>Fechas. Tarifas. Descuentos. Perfil Artista.</p>
+                </section>
+
+            </div>
+            <!-- // st-scroll -->
 
         </div>
-        <!-- // st-scroll -->
+        <!-- // st-container -->
 
     </div>
-    <!-- // st-container -->
-
 </div>
+<router-outlet></router-outlet>
+<app-footer></app-footer>

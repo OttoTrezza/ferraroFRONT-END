@@ -8,10 +8,10 @@
 }
 
 body {
-    background: #ddd url(assets/images/justicia.jpg) no-repeat right;
-    width: 100%;
-    height: 1000px;
-    background-size: 65% 170%;
+    background: #ddd url(assets/images/LaCasita.jpg) no-repeat right;
+    width: 80%;
+    height: 100%;
+    background-size: 80% 70%;
 }
 
 a {

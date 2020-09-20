@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { WebsocketService } from '../websocket/websocket.service';
 // import { HttpClient } from '@angular/common/http';
 // import { URL_SERVICIOS } from '../../config/config';
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs-compat/operator/map';
 import { UsuarioService } from '../usuario/usuario.service';
@@ -21,37 +21,37 @@ img: string;
 
       sendMessage( mensaje: string, sala: string, callback: any ) {
         this.name = this.usuarioService.usuario.nombre;
-      this.img = this.usuarioService.usuario.img;
+        this.img = this.usuarioService.usuario.img;
       // this.name = this.wsService.getUsuario().nombre;
       // this.img = this.wsService.getUsuario().img;
-      console.log('name img', this.name, this.img);
-      const payload = {
+        console.log('name img', this.name, this.img);
+        const payload = {
         de: this.name,
         cuerpo: mensaje,
         img: this.img,
-        sala: sala
+        sala
         };
-      this.wsService.emit( 'mensaje' , payload, (resp: any) => {
+        this.wsService.emit( 'mensaje' , payload, (resp: any) => {
         callback(resp);
        // console.log(resp);
       });
-      console.log('Mensaje', payload );
+        console.log('Mensaje', payload );
       }
 
 
       sendMessageAutoOTTO( mensaje: string, sala: string, callback: any ) {
         this.name = this.usuarioService.usuario.nombre;
-      this.img = this.usuarioService.usuario.img;
+        this.img = this.usuarioService.usuario.img;
       // this.name = this.wsService.getUsuario().nombre;
       // this.img = this.wsService.getUsuario().img;
-      console.log('name img', this.name, this.img);
-      const payload = {
+        console.log('name img', this.name, this.img);
+        const payload = {
         de: this.name,
         cuerpo: mensaje,
         img: this.img,
-        sala: sala
+        sala
         };
-      this.wsService.emit( 'mensaje-autoOTTO' , payload, (resp: any) => {
+        this.wsService.emit( 'mensaje-autoOTTO' , payload, (resp: any) => {
         callback(resp);
       });
       }
@@ -59,7 +59,7 @@ img: string;
         this.name = this.usuarioService.usuario.nombre;
         const payload = {
           de: this.name,
-          sala: sala,
+          sala,
           posX,
           posY,
           tiempo
@@ -76,7 +76,7 @@ img: string;
         this.name = this.usuarioService.usuario.nombre;
         const payload = {
           de: this.name,
-          sala: sala,
+          sala,
           alpha1,
           beta1,
           gamma1,

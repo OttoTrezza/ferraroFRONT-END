@@ -10,6 +10,7 @@ import { SettingsService } from '../../services/service.index';
 })
 export class AccoutSettingsComponent implements OnInit {
 
+  // tslint:disable-next-line:variable-name
   constructor( public _ajustes: SettingsService ) { }
 
   ngOnInit() {
@@ -20,15 +21,15 @@ export class AccoutSettingsComponent implements OnInit {
 
     this.aplicarCheck( link );
 
-    this._ajustes.aplicarTema( tema );
+    // this._ajustes.aplicarTema( tema );
 
   }
 
   aplicarCheck( link: any ) {
 
-    let selectores: any = document.getElementsByClassName('selector');
+    const selectores: any = document.getElementsByClassName('selector');
 
-    for ( let ref of selectores ) {
+    for ( const ref of selectores ) {
       ref.classList.remove('working');
     }
 
@@ -38,11 +39,11 @@ export class AccoutSettingsComponent implements OnInit {
 
   colocarCheck() {
 
-    let selectores: any = document.getElementsByClassName('selector');
+    const selectores: any = document.getElementsByClassName('selector');
 
-    let tema = this._ajustes.ajustes.tema;
+    const tema = this._ajustes.ajustes.tema;
 
-    for ( let ref of selectores ) {
+    for ( const ref of selectores ) {
       if ( ref.getAttribute('data-theme') === tema ) {
         ref.classList.add('working');
         break;

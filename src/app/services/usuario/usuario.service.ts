@@ -7,8 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import { SubirArchivoService } from '../subir-archivo/subir-archivo.service';
-import { Observable } from 'rxjs/Observable';
-import swal from 'sweetalert';
+import { Observable } from 'rxjs';
 // import { WebsocketService } from '../websocket/websocket.service';
 
 
@@ -22,10 +21,10 @@ export class UsuarioService {
   menu: any = [];
   sala: string;
   // public tipo: string = 'usuario';
-  constructor (
+  constructor(
     public http: HttpClient,
     public router: Router,
-    public _subirArchivoService: SubirArchivoService,
+    public subirarchivoservice: SubirArchivoService,
     // public wsService: WebsocketService
     ) {
      this.cargarStorage();
@@ -46,7 +45,7 @@ export class UsuarioService {
             .catch( err => {
               this.router.navigate(['login']);
                 // swal( 'No se pudo renovar token', 'No fue posible renovar token', 'error');
-                return Observable.throw( err );
+              return Observable.throw( err );
             });
   }
   estaLogueado() {
@@ -107,7 +106,7 @@ export class UsuarioService {
 
   loginGoogle( token: string ) {
 
-    let url = URL_SERVICIOS + 'login/google';
+    const url = URL_SERVICIOS + 'login/google';
 
     return this.http.post( url, { token } )
                 .map( (resp: any) => {
@@ -129,11 +128,11 @@ export class UsuarioService {
       localStorage.removeItem('email');
     }
 
-    let url = URL_SERVICIOS + 'login';
+    const url = URL_SERVICIOS + 'login';
     return this.http.post( url, usuario )
                   .map( (resp: any) => {
                      this.guardarStorage( resp.id, resp.token, resp.usuario, resp.menu, resp.sala );
-                    return true;
+                     return true;
                   })
                   .catch( err => {
                   // swal( 'Error en el Login', err.error.mensaje, 'error');
@@ -144,22 +143,22 @@ export class UsuarioService {
 
 
   cargarUsuarios() {
-    let desde = JSON.parse( localStorage.getItem('desdeu'));
-    let url = URL_SERVICIOS + 'usuario?desde=' + desde;
+    const desde = JSON.parse( localStorage.getItem('desdeu'));
+    const url = URL_SERVICIOS + 'usuario?desde=' + desde;
     return this.http.get( url );
   }
   cargarUsuariosTodos() {
-    let url = URL_SERVICIOS + 'usuario?';
+    const url = URL_SERVICIOS + 'usuario?';
     return this.http.get( url );
   }
   cargarSalasTodas() {
-    let url = URL_SERVICIOS + 'usuario/salas?';
+    const url = URL_SERVICIOS + 'usuario/salas?';
     return this.http.get( url );
   }
 
   crearUsuario( usuario: Usuario ) {
 
-    let url = URL_SERVICIOS + 'usuario';
+    const url = URL_SERVICIOS + 'usuario';
     return this.http.post( url, usuario)
                         .map((resp: any) => {
                           // swal('Usuario creado', usuario.email, 'success');
@@ -174,7 +173,7 @@ export class UsuarioService {
 
   buscarUsuarios( termino: string ) {
 
-    let url = URL_SERVICIOS + 'busqueda/coleccion/usuarios/' + termino;
+    const url = URL_SERVICIOS + 'busqueda/coleccion/usuarios/' + termino;
     return this.http.get( url )
            .map((resp: any) => resp.usuarios );
   }
@@ -189,7 +188,7 @@ export class UsuarioService {
               .map((resp: any) => {
 
                 if ( usuario._id === this.usuario._id) {
-                   let usuarioDB: Usuario = resp.usuario;
+                   const usuarioDB: Usuario = resp.usuario;
                    this.guardarStorage( usuarioDB._id, this.token, usuarioDB, this.menu, this.sala );
                 }
                 // swal('Usuario actualizado', usuario.nombre, 'success');
@@ -200,12 +199,12 @@ export class UsuarioService {
 
     let url = URL_SERVICIOS + 'usuario/' + usuario._id;
     url += '?token=' + this.token;
-usuario.sala = sala;
+    usuario.sala = sala;
     return this.http.put( url, usuario)
               .map((resp: any) => {
 
                 if ( usuario._id === this.usuario._id) {
-                   let usuarioDB: Usuario = resp.usuario;
+                   const usuarioDB: Usuario = resp.usuario;
                    usuarioDB.sala = sala;
                    this.guardarStorage( usuarioDB._id, this.token, usuarioDB, this.menu, sala );
                 }
@@ -228,7 +227,7 @@ usuario.sala = sala;
 
   cambiarImagen( archivo: File, id: string) {
 
-    this._subirArchivoService.subirArchivo( archivo, 'usuarios' , id )
+    this.subirarchivoservice.subirArchivo( archivo, 'usuarios' , id )
           .then( (resp: any ) => {
             this.usuario.img = resp.usuario.img;
            // swal('Imagen Actualizada', this.usuario.nombre, 'success');
@@ -239,7 +238,7 @@ usuario.sala = sala;
           });
   }
   obtenerUsuario( id: string) {
-    let url = URL_SERVICIOS + 'usuario/' + id;
+    const url = URL_SERVICIOS + 'usuario/' + id;
     return this.http.get( url )
           .map((resp: any) => resp.usuario );
   }

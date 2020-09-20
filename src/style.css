@@ -4,9 +4,9 @@
 /* 385 fondo cuadradito superior y posterior hoja */
 
 
-/* 
+/*
 body {
-    background: #ddd url(assets/images/justicia.jpg) no-repeat right;
+    background: #ddd url(assets/images/LaCasita.jpg) no-repeat right;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -174,7 +174,7 @@ body {
 }
 
 .st-panel1 {
-    background: #ddd url(assets/images/justicia.jpg) no-repeat right;
+    background: #ddd url(assets/images/LaCasita.jpg) no-repeat right;
     width: cover;
     height: cover;
     background-size: 65% 170%;
@@ -282,7 +282,7 @@ body {
     position: absolute;
     top: 0px;
     margin-left: 43vw;
-    background: #ddd url(assets/images/justicia.jpg) no-repeat right;
+    background: #ddd url(assets/images/LaCasita.jpg) no-repeat right;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -314,7 +314,7 @@ body {
     position: absolute;
     top: 0px;
     margin-left: 43vw;
-    background: #ddd url(assets/images/justicia.jpg) no-repeat right;
+    background: #ddd url(assets/images/LaCasita.jpg) no-repeat right;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;

@@ -18,16 +18,17 @@ export class RegisterComponent implements OnInit {
   forma: FormGroup;
 
   constructor(
+    // tslint:disable-next-line:variable-name
     public _usuarioService: UsuarioService,
     public router: Router
   ) { }
 
 sonIguales(campo1: string, campo2: string) {
 return( group: FormGroup) => {
-let pass1 = group.controls[campo1].value;
-let pass2 = group.controls[campo2].value;
+const pass1 = group.controls[campo1].value;
+const pass2 = group.controls[campo2].value;
 
- if (pass1 === pass2) {
+if (pass1 === pass2) {
    return null;
  } else {
   return{
@@ -60,16 +61,16 @@ let pass2 = group.controls[campo2].value;
     return;
   }
 
-  if ( !this.forma.value.condiciones) {
+    if ( !this.forma.value.condiciones) {
     swal('Importante', 'Debe aceptar las condiciones', 'warning');
     return;
   }
-let usuario = new Usuario (
+    const usuario = new Usuario (
   this.forma.value.nombre,
   this.forma.value.correo,
   this.forma.value.password
 );
-this._usuarioService.crearUsuario(usuario)
+    this._usuarioService.crearUsuario(usuario)
                 .subscribe(resp => this.router.navigate(['login']));
 
 
