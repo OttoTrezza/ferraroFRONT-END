@@ -136,7 +136,7 @@ export class UsuarioService {
                   })
                   .catch( err => {
                   // swal( 'Error en el Login', err.error.mensaje, 'error');
-                  return Observable.throw( err );
+                  return ( err );
                   });
   }
 

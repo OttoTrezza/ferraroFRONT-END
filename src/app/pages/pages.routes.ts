@@ -34,7 +34,7 @@ const pagesRoutes: Routes = [
     {
         path: 'usuarios',
         component: UsuariosComponent,
-        canActivate: [ AdminGuard],
+        // canActivate: [ AdminGuard],
         data: { titulo: 'mantenimiento de usuario' }
     },
     { path: 'hospitales', component: HospitalesComponent, data: { titulo: 'mantenimiento de hospital' } },

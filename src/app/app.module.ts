@@ -37,7 +37,7 @@ const config: SocketIoConfig = {
     FooterComponent,
     ContactoComponent,
     LoginComponent,
-    RegisterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
