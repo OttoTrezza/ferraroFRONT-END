@@ -30,6 +30,7 @@ import { AutoOTTOComponent } from './autoOTTO/autoOTTO.component';
 import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 import { ChatComponent } from '../components/chat/chat.component';
 import { AutoOTTOChatComponent } from '../components/chat/auto-otto.component';
+import { Artista1Component } from './artista1/artista1.component';
 
 
 
@@ -37,6 +38,7 @@ import { AutoOTTOChatComponent } from '../components/chat/auto-otto.component';
 
 @NgModule({
     declarations: [
+      Artista1Component,
         DashboardComponent,
         ProfileComponent,
         UsuariosComponent,

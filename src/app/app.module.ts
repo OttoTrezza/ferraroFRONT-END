@@ -40,7 +40,8 @@ const config: SocketIoConfig = {
     LoginComponent,
     InicioComponent,
 
-    RegisterComponent
+    RegisterComponent,
+
   ],
   imports: [
     BrowserModule,

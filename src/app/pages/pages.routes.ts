@@ -16,11 +16,13 @@ import { MedicoComponent } from './medicos/medico.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { MensajesComponent } from './mensajes/mensajes.component';
 import { AutoOTTOComponent } from './autoOTTO/autoOTTO.component';
+import { Artista1Component } from './artista1/artista1.component';
 
 
 
 const pagesRoutes: Routes = [
   // canActivate: [VerificatokenGuard],
+  { path: 'artista1', component: Artista1Component,  data: { titulo: 'Artista1' } },
     { path: 'dashboard', component: DashboardComponent,  data: { titulo: 'Dashboard' } },
     { path: 'mensajes', component: MensajesComponent, data: { titulo: 'Mensajes' } },
     { path: 'autoOTTO', component: AutoOTTOComponent, data: { titulo: 'AutoOTTO' } },

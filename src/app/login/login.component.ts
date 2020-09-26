@@ -75,7 +75,7 @@ attachSignin( element ) {
     this.usuarioservice.login(usuario, forma.value.recuerdame)
     .subscribe( correcto => {
       console.log('entramos1', correcto);
-      this.router.navigate(['/*/dashboard']);
+      this.router.navigate(['/*/artista1']);
     });
   }
 
