@@ -10,9 +10,10 @@ import { MedicoService } from '../../services/service.index';
 export class MedicosComponent implements OnInit {
 
   medicos: Medico[] = [];
-  desde: number = 0;
-  cargando: boolean = true;
+  desde = 0;
+  cargando = true;
   constructor(
+            // tslint:disable-next-line:variable-name
     public _medicoService: MedicoService
   ) { }
 
@@ -52,7 +53,7 @@ export class MedicosComponent implements OnInit {
 
   cambiarDesde(valor: number ) {
 
-    let desdem = JSON.parse( localStorage.getItem('desdem')) + valor;
+    const desdem = JSON.parse( localStorage.getItem('desdem')) + valor;
 
     if ( desdem >= this._medicoService.totalMedicos) {
       return;

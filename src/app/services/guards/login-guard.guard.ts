@@ -5,6 +5,7 @@ import { UsuarioService } from '../usuario/usuario.service';
 @Injectable()
 export class LoginGuardGuard implements CanActivate {
   constructor(
+    // tslint:disable-next-line:variable-name
     public _usuarioService: UsuarioService,
     public router: Router ) {}
   canActivate() {

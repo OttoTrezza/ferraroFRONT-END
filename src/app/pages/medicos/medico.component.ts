@@ -19,14 +19,19 @@ export class MedicoComponent implements OnInit {
   hospital: Hospital = new Hospital('');
 
   constructor(
+        // tslint:disable-next-line:variable-name
     public _medicoService: MedicoService,
+            // tslint:disable-next-line:variable-name
     public _hospitalService: HospitalService,
     public router: Router,
     public activatedRoute: ActivatedRoute,
+            // tslint:disable-next-line:variable-name
     public _modalUploadService: ModalUploadService
   ) {
     activatedRoute.params.subscribe( params => {
-      let id = params['id'];
+      // tslint:disable-next-line:prefer-const
+      // tslint:disable-next-line:no-string-literal
+      const id = params['id'];
 
       if ( id !== 'nuevo') {
         this.cargarMedicoid( id );
@@ -38,7 +43,7 @@ export class MedicoComponent implements OnInit {
     this._hospitalService.cargarHospitales()
           .subscribe( (resp: any) => this.hospitales = resp.hospitales);
 
-          this._modalUploadService.notificacion
+    this._modalUploadService.notificacion
                 .subscribe( resp => {
                   this.medico.img = resp.medico.img;
                 });

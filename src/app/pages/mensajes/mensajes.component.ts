@@ -27,22 +27,26 @@ export class MensajesComponent implements OnInit, OnDestroy {
   sala: string;
   salas = [];
   img: string;
-  cargando: boolean = true;
-  totalRegistros: number = 0;
-  progreso: number = 20;
-  progreso1: number = 20;
+  cargando = true;
+  totalRegistros = 0;
+  progreso = 20;
+  progreso1 = 20;
   hexString: string;
 
   constructor(
+            // tslint:disable-next-line:variable-name
     public _chatService: ChatService,
+            // tslint:disable-next-line:variable-name
     public _usuarioService: UsuarioService,
+            // tslint:disable-next-line:variable-name
     public _modalUploadService: ModalUploadService,
+            // tslint:disable-next-line:variable-name
     public _wsService: WebsocketService,
     public router: Router,
     public activatedRoute: ActivatedRoute
   ) {
     activatedRoute.params.subscribe( params => {
-    let id = params['id'];
+    const id = params.id;
     });
    }
 
@@ -107,8 +111,8 @@ export class MensajesComponent implements OnInit, OnDestroy {
       return;
     }
 
-     this._chatService.focusBuscar( this.textoUser );
-     this.textoUser = '';
+    this._chatService.focusBuscar( this.textoUser );
+    this.textoUser = '';
 
   }
 

@@ -24,7 +24,8 @@ export class BusquedaComponent implements OnInit {
 
     activatedRoute.params
           .subscribe( params => {
-            let termino = params['termino'];
+            // tslint:disable-next-line:no-string-literal
+            const termino = params['termino'];
             this.buscar( termino );
           });
   }
@@ -32,7 +33,7 @@ export class BusquedaComponent implements OnInit {
   ngOnInit() {
   }
 buscar( termino: string) {
-let url = URL_SERVICIOS + '/busqueda/todo/' + termino;
+const url = URL_SERVICIOS + '/busqueda/todo/' + termino;
 this.http.get(url)
       .subscribe((resp: any) => {
         console.log(resp);

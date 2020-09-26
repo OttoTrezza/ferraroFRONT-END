@@ -11,11 +11,8 @@ import { CommonModule } from '@angular/common';
 // ng2-charts
 // import { ChartsModule } from 'ng2-charts';
 
-import { PagesComponent } from './pages.component';
-
 import { DashboardComponent } from './dashboard/dashboard.component';
 // import { ProgressComponent } from './progress/progress.component';
-import { Graficas1Component } from './graficas1/graficas1.component';
 
 // pipes
 import { PipesModule } from '../pipes/pipes.module';
@@ -29,6 +26,10 @@ import { MedicosComponent } from './medicos/medicos.component';
 import { MedicoComponent } from './medicos/medico.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 import { MensajesComponent } from './mensajes/mensajes.component';
+import { AutoOTTOComponent } from './autoOTTO/autoOTTO.component';
+import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
+import { ChatComponent } from '../components/chat/chat.component';
+import { AutoOTTOChatComponent } from '../components/chat/auto-otto.component';
 
 
 
@@ -36,24 +37,23 @@ import { MensajesComponent } from './mensajes/mensajes.component';
 
 @NgModule({
     declarations: [
-        // PagesComponent,
         DashboardComponent,
-      //  ProgressComponent,
-        Graficas1Component,
-      //  IncrementadorComponent,
         ProfileComponent,
         UsuariosComponent,
-        // ModalUploadComponent,
         HospitalesComponent,
         MedicosComponent,
         MedicoComponent,
         MensajesComponent,
+        AutoOTTOComponent,
+        AutoOTTOChatComponent,
+        AccoutSettingsComponent,
+        ChatComponent,
         BusquedaComponent
 
     ],
     exports: [
         DashboardComponent,
-        // ProgressComponent,
+        ChatComponent
        // BusquedaComponent // Esto fue insterado recien,,,,
     ],
     imports: [

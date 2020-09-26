@@ -13,14 +13,16 @@ import swal from 'sweetalert';
 export class HospitalesComponent implements OnInit {
 hospital: Hospital;
   hospitales: Hospital[] = [];
-  desde: number = 0;
+  desde = 0;
 
 
-  totalRegistros: number = 0;
-  cargando: boolean = true;
+  totalRegistros = 0;
+  cargando = true;
 
   constructor(
+        // tslint:disable-next-line:variable-name
     public _hospitalService: HospitalService,
+    // tslint:disable-next-line:variable-name
     public _modalUploadService: ModalUploadService
   ) { }
 
@@ -61,7 +63,7 @@ hospital: Hospital;
       if (!value) {
         return;
       }
-      let hospital = new Hospital (value) ;
+      const hospital = new Hospital (value) ;
       this._hospitalService.crearHospital(hospital)
       .subscribe(() => this.cargarHospitales() );
     });
@@ -133,7 +135,7 @@ hospital: Hospital;
 
   cambiarDesde(valor: number ) {
 
-    let desdeh = JSON.parse( localStorage.getItem('desdeh')) + valor;
+    const desdeh = JSON.parse( localStorage.getItem('desdeh')) + valor;
 
     if ( desdeh >= this.totalRegistros) {
       return;

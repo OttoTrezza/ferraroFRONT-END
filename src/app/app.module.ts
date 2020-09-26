@@ -23,6 +23,7 @@ import { RegisterComponent } from './login/register.component';
 import { environment } from '../environments/environment';
 // // sockets
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { InicioComponent } from './inicio/inicio.comoponent';
 const config: SocketIoConfig = {
    url: environment.wsUrl, options: {}
    };
@@ -37,6 +38,8 @@ const config: SocketIoConfig = {
     FooterComponent,
     ContactoComponent,
     LoginComponent,
+    InicioComponent,
+
     RegisterComponent
   ],
   imports: [

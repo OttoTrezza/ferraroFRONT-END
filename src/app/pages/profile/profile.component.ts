@@ -14,6 +14,7 @@ export class ProfileComponent implements OnInit {
   imagenSubir: File;
   imagenTemp: any;
   constructor(
+    // tslint:disable-next-line:variable-name
     public _usuarioService: UsuarioService
   ) {
     this.usuario = this._usuarioService.usuario;
@@ -42,12 +43,12 @@ export class ProfileComponent implements OnInit {
       return;
     }
 
-  this.imagenSubir = archivo;
+    this.imagenSubir = archivo;
 
-  let reader = new FileReader();
-  let urlImagenTemp = reader.readAsDataURL( archivo );
+    const reader = new FileReader();
+    const urlImagenTemp = reader.readAsDataURL( archivo );
 
-  reader.onloadend = () => this.imagenTemp = reader.result;
+    reader.onloadend = () => this.imagenTemp = reader.result;
 
   }
 

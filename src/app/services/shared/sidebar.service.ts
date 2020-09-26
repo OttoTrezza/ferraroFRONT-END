@@ -28,6 +28,7 @@ menu: any[] = [];
   // ];
 
   constructor(
+    // tslint:disable-next-line:variable-name
     public _UsuarioService: UsuarioService
   ) {}
 cargarMenu() {

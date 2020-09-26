@@ -14,7 +14,9 @@ export class SidebarComponent implements OnInit {
 usuario: Usuario;
 
   constructor(
+     // tslint:disable-next-line:variable-name
     public _sidebar: SidebarService,
+     // tslint:disable-next-line:variable-name
     public _usuarioService: UsuarioService
     ) { }
 

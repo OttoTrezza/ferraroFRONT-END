@@ -15,9 +15,11 @@ nombre: string;
 titulo: string;
 
   constructor( private router: Router,
-              private title: Title,
-              private meta: Meta,
-              public _usuarioService: UsuarioService) {
+
+               private title: Title,
+               private meta: Meta,
+               // tslint:disable-next-line:variable-name
+               public _usuarioService: UsuarioService) {
 
     this.getDataRoute()
     .subscribe( data => {

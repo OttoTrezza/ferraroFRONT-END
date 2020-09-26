@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
  usuario: Usuario;
   constructor(
+    // tslint:disable-next-line:variable-name
     public _usuarioService: UsuarioService,
     public router: Router
     ) { }

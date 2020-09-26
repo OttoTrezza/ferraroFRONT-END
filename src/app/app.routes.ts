@@ -8,12 +8,14 @@ import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component
 import { LoginComponent } from './login/login.component';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './login/register.component';
+import { LoginGuardGuard } from './services/service.index';
+import { InicioComponent } from './inicio/inicio.comoponent';
 
 
 const appRoutes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    {path: '', component: AppComponent },
+    {path: '', component: InicioComponent },
     {path: '*',
     component: PagesComponent,
     // canActivate: [LoginGuardGuard],

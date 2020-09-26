@@ -127,11 +127,13 @@ export class UsuarioService {
     } else {
       localStorage.removeItem('email');
     }
+    console.log('usuario', usuario);
 
     const url = URL_SERVICIOS + 'login';
     return this.http.post( url, usuario )
                   .map( (resp: any) => {
                      this.guardarStorage( resp.id, resp.token, resp.usuario, resp.menu, resp.sala );
+                     console.log('resdp,usuarioservice,', resp);
                      return true;
                   })
                   .catch( err => {

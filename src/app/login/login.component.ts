@@ -71,9 +71,10 @@ attachSignin( element ) {
       return;
     }
     const usuario = new Usuario(null, forma.value.email, forma.value.password);
+    console.log('entramos');
     this.usuarioservice.login(usuario, forma.value.recuerdame)
     .subscribe( correcto => {
-      console.log('entramos');
+      console.log('entramos1', correcto);
       this.router.navigate(['/*/dashboard']);
     });
   }

@@ -6,6 +6,7 @@ import { UsuarioService } from '../usuario/usuario.service';
 export class AdminGuard implements CanActivate {
 
 constructor(
+  // tslint:disable-next-line:variable-name
   public _usuarioService: UsuarioService
 ) {}
 
