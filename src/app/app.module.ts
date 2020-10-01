@@ -13,7 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { AreasPComponent } from './areas-p/areas-p.component';
 import { EjiComponent } from './eji/eji.component';
-import { FooterComponent } from './footer/footer.component';
+// import { FooterComponent } from './footer/footer.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { PagesComponent } from './pages/pages.component';
 import { SharedModule } from './shared/shared.module';
@@ -32,16 +32,13 @@ const config: SocketIoConfig = {
   declarations: [
     AppComponent,
     PagesComponent,
-    FooterComponent,
+    // FooterComponent,
     AreasPComponent,
     EjiComponent,
-    FooterComponent,
     ContactoComponent,
     LoginComponent,
     InicioComponent,
-
-    RegisterComponent,
-
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

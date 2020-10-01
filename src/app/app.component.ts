@@ -10,7 +10,7 @@ import { SettingsService } from './services/service.index';
 })
 export class AppComponent {
 
-  // tslint:disable-next-line:variable-name
-  constructor( public _ajustes: SettingsService ) {} // dentro del parentesis: ,private socket: Socket
+
+  constructor( public ajustes: SettingsService ) {} // dentro del parentesis: ,private socket: Socket
 
 }

@@ -31,13 +31,17 @@ import { AccoutSettingsComponent } from './accout-settings/accout-settings.compo
 import { ChatComponent } from '../components/chat/chat.component';
 import { AutoOTTOChatComponent } from '../components/chat/auto-otto.component';
 import { Artista1Component } from './artista1/artista1.component';
-
+import { EstelarComponent } from './estelar/estelar.component';
+import { IniciologinComponent } from './iniciologin/iniciologin.comoponent';
+import { ServiceModule } from '../services/service.module';
+import { FooterComponent } from '../footer/footer.component';
 
 
 
 
 @NgModule({
     declarations: [
+IniciologinComponent,
       Artista1Component,
         DashboardComponent,
         ProfileComponent,
@@ -50,8 +54,10 @@ import { Artista1Component } from './artista1/artista1.component';
         AutoOTTOChatComponent,
         AccoutSettingsComponent,
         ChatComponent,
-        BusquedaComponent
+        BusquedaComponent,
+EstelarComponent,
 
+FooterComponent
     ],
     exports: [
         DashboardComponent,
@@ -63,7 +69,8 @@ import { Artista1Component } from './artista1/artista1.component';
         SharedModule,
         PAGES_ROUTES,
         FormsModule,
-        PipesModule
+PipesModule,
+ServiceModule
     ]
 })
 export class PagesModule { }
