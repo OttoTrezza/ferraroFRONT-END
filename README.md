@@ -28,3 +28,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Esta es rama master(produccion) desplegas por back pasando la carpeta dist generada luego de ejecutar el siguiente cod....
 ng build --prod --aot false --build-optimizer false --deploy-url="https://ferraroeji.herokuapp.com/"
+ng build --prod --aot false --build-optimizer false --deploy-url="https://ejiestudiojuridicointegral.com.ar/"
+
