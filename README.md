@@ -26,5 +26,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-Esta es rama local...desplegas con ng serve!
+Esta es rama master(produccion) desplegas por back pasando la carpeta dist generada luego de ejecutar el siguiente cod....
 ng build --prod --aot false --build-optimizer false --deploy-url="https://ferraroeji.herokuapp.com/"

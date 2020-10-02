@@ -1,4 +1,4 @@
 export const environment = {
-  production: false,
+  production: true,
      wsUrl: 'https://ferraroeji.herokuapp.com/' // http://localhost:300/
 };
