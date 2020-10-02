@@ -21,7 +21,7 @@ export class AccoutSettingsComponent implements OnInit {
 
     this.aplicarCheck( link );
 
-    // this._ajustes.aplicarTema( tema );
+    this._ajustes.aplicarTema( tema );
 
   }
 

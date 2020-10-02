@@ -7,7 +7,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import { SubirArchivoService } from '../subir-archivo/subir-archivo.service';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+import swal from 'sweetalert';
 // import { WebsocketService } from '../websocket/websocket.service';
 
 
@@ -24,7 +25,8 @@ export class UsuarioService {
   constructor(
     public http: HttpClient,
     public router: Router,
-    public subirarchivoservice: SubirArchivoService,
+    // tslint:disable-next-line:variable-name
+    public _subirArchivoService: SubirArchivoService,
     // public wsService: WebsocketService
     ) {
      this.cargarStorage();
@@ -59,7 +61,7 @@ export class UsuarioService {
       this.token = localStorage.getItem('token');
       this.usuario = JSON.parse( localStorage.getItem('usuario'));
       this.menu = JSON.parse( localStorage.getItem('menu'));
-      this.sala = JSON.parse( localStorage.getItem('sala'));
+      // this.sala = JSON.parse( localStorage.getItem('sala'));
     } else {
         this.token = '';
         this.usuario = null;
@@ -111,7 +113,7 @@ export class UsuarioService {
     return this.http.post( url, { token } )
                 .map( (resp: any) => {
                   this.guardarStorage( resp.id, resp.token, resp.usuario, resp.menu, resp.sala );
-                  // console.log(resp);
+                  console.log(resp);
 
                   return true;
                 });
@@ -127,18 +129,16 @@ export class UsuarioService {
     } else {
       localStorage.removeItem('email');
     }
-    console.log('usuario', usuario);
 
     const url = URL_SERVICIOS + 'login';
     return this.http.post( url, usuario )
                   .map( (resp: any) => {
                      this.guardarStorage( resp.id, resp.token, resp.usuario, resp.menu, resp.sala );
-                     console.log('resdp,usuarioservice,', resp);
                      return true;
                   })
                   .catch( err => {
                   // swal( 'Error en el Login', err.error.mensaje, 'error');
-                  return ( err );
+                  return Observable.throw( err );
                   });
   }
 
@@ -229,7 +229,7 @@ export class UsuarioService {
 
   cambiarImagen( archivo: File, id: string) {
 
-    this.subirarchivoservice.subirArchivo( archivo, 'usuarios' , id )
+    this._subirArchivoService.subirArchivo( archivo, 'usuarios' , id )
           .then( (resp: any ) => {
             this.usuario.img = resp.usuario.img;
            // swal('Imagen Actualizada', this.usuario.nombre, 'success');
@@ -240,7 +240,8 @@ export class UsuarioService {
           });
   }
   obtenerUsuario( id: string) {
-    const url = URL_SERVICIOS + 'usuario/' + id;
+    // tslint:disable-next-line:prefer-const
+    let url = URL_SERVICIOS + 'usuario/' + id;
     return this.http.get( url )
           .map((resp: any) => resp.usuario );
   }

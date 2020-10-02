@@ -1,8 +1,5 @@
 import { RouterModule, Routes, CanActivate } from '@angular/router';
 
-// import { PagesComponent } from './pages.component';
-// import { DashboardComponent } from './dashboard/dashboard.component';
-// import { ProgressComponent } from './progress/progress.component';
 import { AccoutSettingsComponent } from './accout-settings/accout-settings.component';
 // import { LoginGuardGuard } from '../services/guards/login-guard.guard';
 import { AdminGuard, VerificatokenGuard } from '../services/service.index';
@@ -17,9 +14,9 @@ import { BusquedaComponent } from './busqueda/busqueda.component';
 import { MensajesComponent } from './mensajes/mensajes.component';
 import { AutoOTTOComponent } from './autoOTTO/autoOTTO.component';
 import { Artista1Component } from './artista1/artista1.component';
+import { Artista2Component } from './artista2/artista2.component';
 import { EstelarComponent } from './estelar/estelar.component';
 import { IniciologinComponent } from './iniciologin/iniciologin.comoponent';
-import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -27,15 +24,6 @@ const pagesRoutes: Routes = [
 
 
 { path: 'iniciologin', component: IniciologinComponent,  data: { titulo: 'iniciologin' } },
-
-{path: 'dashboard', component: DashboardComponent },
-// loadChildren: './app.component#st-panel-2'},
-{path: '#st-panel-2', component: IniciologinComponent },
-// loadChildren: './app.component#st-panel-3'},
-{path: '#st-panel-3', component: IniciologinComponent },
-// loadChildren: './app.component#st-panel-4'},
-{path: '#st-panel-4', component: IniciologinComponent },
-
     { path: 'mensajes', component: MensajesComponent, data: { titulo: 'Mensajes' } },
     { path: 'autoOTTO', component: AutoOTTOComponent, data: { titulo: 'AutoOTTO' } },
     { path: 'account-settings', component: AccoutSettingsComponent, data: { titulo: 'Ajustes' } },
@@ -52,9 +40,10 @@ const pagesRoutes: Routes = [
     { path: 'medicos', component: MedicosComponent, data: { titulo: 'mantenimiento de medico' } },
     { path: 'medico/:id', component: MedicoComponent, data: { titulo: 'Actualizar medico' } },
 { path: 'artista1', component: Artista1Component,  data: { titulo: 'Artista1' } },
+{ path: 'artista2', component: Artista2Component,  data: { titulo: 'Artista2' } },
 { path: 'estelar', component: EstelarComponent,  data: { titulo: 'estelar' } },
 
-    { path: '', redirectTo: '/artista1', pathMatch: 'full' }
+    { path: '', redirectTo: '/iniciologin', pathMatch: 'full' }
 
 ];
 

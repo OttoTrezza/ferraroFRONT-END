@@ -11,6 +11,7 @@ import { SettingsService } from './services/service.index';
 export class AppComponent {
 
 
-  constructor( public ajustes: SettingsService ) {} // dentro del parentesis: ,private socket: Socket
+  // tslint:disable-next-line:variable-name
+  constructor( public _ajustes: SettingsService ) {} // dentro del parentesis: ,private socket: Socket
 
 }

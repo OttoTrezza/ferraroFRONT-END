@@ -35,6 +35,7 @@ import { EstelarComponent } from './estelar/estelar.component';
 import { IniciologinComponent } from './iniciologin/iniciologin.comoponent';
 import { ServiceModule } from '../services/service.module';
 import { FooterComponent } from '../footer/footer.component';
+import { Artista2Component } from './artista2/artista2.component';
 
 
 
@@ -57,7 +58,9 @@ IniciologinComponent,
         BusquedaComponent,
 EstelarComponent,
 
-FooterComponent
+FooterComponent,
+
+Artista2Component
     ],
     exports: [
         DashboardComponent,
