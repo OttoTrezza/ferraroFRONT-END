@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { start } from 'repl';
 
 @Component({
   selector: 'app-estelar',
@@ -10,6 +11,5 @@ export class EstelarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
+}
 }
