@@ -1,4 +1,6 @@
 //	CSS/HTML Setup
+import * as THREE from 'three';
+
 var masterContainer = document.getElementById('visualization');
 
 //	Clear cross origin flags
@@ -190,7 +192,7 @@ function initScene() {
     //	-----------------------------------------------------------------------------
     //	Setup our renderer
     screenWidth = window.innerWidth;
-    screenHeight = window.innerHeight
+    screenHeight = window.innerHeight;
     screenWhalf = window.innerWidth / 2;
     screenHhalf = window.innerHeight / 2;
 
