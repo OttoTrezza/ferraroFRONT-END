@@ -26,12 +26,13 @@ export class ChatComponent implements OnInit, OnDestroy {
   constructor(
     // tslint:disable-next-line:variable-name
     public _chatService: ChatService,
-        // tslint:disable-next-line:variable-name
+    // tslint:disable-next-line:variable-name
     public _usuarioService: UsuarioService,
-        // tslint:disable-next-line:variable-name
+    // tslint:disable-next-line:variable-name
     public _modalUploadService: ModalUploadService
     ) { }
 
+  // tslint:disable-next-line:typedef
   ngOnInit() {
 
 
@@ -74,9 +75,11 @@ export class ChatComponent implements OnInit, OnDestroy {
 
     }
 
+  // tslint:disable-next-line:typedef
   ngOnDestroy() {
     this.mensajesSubscription.unsubscribe();
   }
+  // tslint:disable-next-line:typedef
   mostrarModal( id: string) {
     this._modalUploadService.mostrarModal( 'usuarios', id );
     // this.scrollBottom();
@@ -96,6 +99,7 @@ export class ChatComponent implements OnInit, OnDestroy {
 //         this.divChatbox.scrollTop(scrollHeight);
 //     }
 // }
+  // tslint:disable-next-line:typedef
   enviar() {
 
     if ( this.texto.trim().length === 0 ) {

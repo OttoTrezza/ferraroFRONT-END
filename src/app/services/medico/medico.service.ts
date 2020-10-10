@@ -4,25 +4,26 @@ import { URL_SERVICIOS } from '../../config/config';
 import { UsuarioService } from '../usuario/usuario.service';
 import { Medico } from '../../models/medico.model';
 // import { ImagenPipe } from '../../pipes/imagen.pipe';
-import swal from 'sweetalert';
+
 
 
 
 @Injectable()
 export class MedicoService {
 
-  totalMedicos: number = 0;
+  totalMedicos = 0;
 
   constructor(
     public http: HttpClient,
+    // tslint:disable-next-line:variable-name
     public _usuarioService: UsuarioService
   ) { }
 
 
-
+  // tslint:disable-next-line:typedef
   cargarMedico() {
-  let desde = JSON.parse( localStorage.getItem('desdem'));
-  let url = URL_SERVICIOS + 'medico?desde=' + desde;
+  const desde = JSON.parse( localStorage.getItem('desdem'));
+  const url = URL_SERVICIOS + 'medico?desde=' + desde;
 
   return this.http.get( url )
         .map((resp: any) => {
@@ -31,21 +32,22 @@ export class MedicoService {
         });
   }
 
-
+  // tslint:disable-next-line:typedef
   guardardesdeStorage( desdem: number) {
     localStorage.setItem('desdem', JSON.stringify( desdem ));
     console.log(desdem);
   }
-
+  // tslint:disable-next-line:typedef
   borrarMedico( id: string ) {
     let url = URL_SERVICIOS + 'medico/' + id;
     url += '?token=' + this._usuarioService.token;
     return this.http.delete( url )
           .map( resp => {
-            swal('Medico Borrado', 'Medico Borrado correctamente', 'success');
+            console.log('Medico Borrado', 'Medico Borrado correctamente', 'success');
             return resp;
           });
-  }
+}
+// tslint:disable-next-line:typedef
   guardarMedico( medico: Medico) {
   let url = URL_SERVICIOS + 'medico';
 
@@ -56,8 +58,8 @@ export class MedicoService {
 
     return this.http.put( url, medico )
           .map( (resp: any) => {
-            swal('Medico Actualizado', medico.nombre, 'success');
-            return resp.medico;
+           console.log('Medico Actualizado', medico.nombre, 'success');
+           return resp.medico;
           });
 
     } else {
@@ -65,18 +67,20 @@ export class MedicoService {
       url += '?token=' + this._usuarioService.token;
       return this.http.post( url, medico )
             .map((resp: any) => {
-              swal('Medico Creado', medico.nombre, 'success');
-              return resp.medico;
+             console.log('Medico Creado', medico.nombre, 'success');
+             return resp.medico;
             });
     }
-  }
+}
+// tslint:disable-next-line:typedef
   cargarMedicoid( id: string) {
-    let url = URL_SERVICIOS + 'medico/' + id;
+    const url = URL_SERVICIOS + 'medico/' + id;
     return this.http.get( url )
           .map( (resp: any) => resp.medico);
-  }
+}
+// tslint:disable-next-line:typedef
   buscarMedicos( termino: string ) {
-    let url = URL_SERVICIOS + 'busqueda/coleccion/medicos/' + termino;
+    const url = URL_SERVICIOS + 'busqueda/coleccion/medicos/' + termino;
     return this.http.get( url )
           .map((resp: any) => resp.medicos );
     }

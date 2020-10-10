@@ -7,8 +7,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import { SubirArchivoService } from '../subir-archivo/subir-archivo.service';
-import { Observable } from 'rxjs/Observable';
-import swal from 'sweetalert';
+import { Observable } from 'rxjs';
+// import swal from 'sweetalert';
 // import { WebsocketService } from '../websocket/websocket.service';
 
 

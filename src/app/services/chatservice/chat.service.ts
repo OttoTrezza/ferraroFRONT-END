@@ -3,7 +3,7 @@ import { WebsocketService } from '../websocket/websocket.service';
 // import { HttpClient } from '@angular/common/http';
 // import { URL_SERVICIOS } from '../../config/config';
 // import swal from 'sweetalert';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs-compat/operator/map';
 import { UsuarioService } from '../usuario/usuario.service';
 import { Router } from '@angular/router';

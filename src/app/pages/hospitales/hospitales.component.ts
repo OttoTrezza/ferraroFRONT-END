@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hospital } from '../../models/hospital.model';
 import { HospitalService, ModalUploadService } from '../../services/service.index';
 
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 
 
 @Component({

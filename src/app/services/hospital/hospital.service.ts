@@ -5,7 +5,7 @@ import { URL_SERVICIOS } from '../../config/config';
 import { Router } from '@angular/router';
 import 'rxjs/add/operator/map';
 
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 import { SubirArchivoService } from '../subir-archivo/subir-archivo.service';
 
 @Injectable()
@@ -14,20 +14,21 @@ export class HospitalService {
   hospital: Hospital;
   token: string;
 
-  constructor (
+  constructor(
     public http: HttpClient,
     public router: Router,
+    // tslint:disable-next-line:variable-name
     public _subirArchivoService: SubirArchivoService
     ) {
       this.cargarStorage();
     }
-
+  // tslint:disable-next-line:typedef
   estaLogueado() {
     return ( this.token.length > 5 ) ? true : false;
   }
 
 
-
+  // tslint:disable-next-line:typedef
   cargarStorage() {
     if ( localStorage.getItem('token')) {
       this.token = localStorage.getItem('token');
@@ -39,13 +40,13 @@ export class HospitalService {
   }
 
 
-
+  // tslint:disable-next-line:typedef
   guardardesdeStorage( desdeh: number) {
     localStorage.setItem('desdeh', JSON.stringify( desdeh ));
   }
 
 
-
+  // tslint:disable-next-line:typedef
   guardarStorage( id: string, token: string, hospital: Hospital) {
     localStorage.setItem('id', id );
     localStorage.setItem('token', token );
@@ -54,57 +55,61 @@ export class HospitalService {
     this.hospital = hospital;
     this.token = token;
   }
-
+  // tslint:disable-next-line:typedef
   cargarHospitales() {
-    let desde = JSON.parse( localStorage.getItem('desdeh'));
-    let url = URL_SERVICIOS + 'hospital?desde=' + desde;
+    const desde = JSON.parse( localStorage.getItem('desdeh'));
+    const url = URL_SERVICIOS + 'hospital?desde=' + desde;
     return this.http.get( url );
   }
 
 
 
+  // tslint:disable-next-line:typedef
   crearHospital(hospital: Hospital) {
     let url = URL_SERVICIOS + 'hospital';
     url += '/?token=' + this.token;
     return this.http.post( url, hospital)
                         .map((resp: any) => {
-                          swal('Hospital creado', hospital.nombre, 'success');
-                        return resp.hospital; // resp.hospital
+                          console.log('Hospital creado', hospital.nombre, 'success');
+                          return resp.hospital; // resp.hospital
                         });
   }
 
 
 
+  // tslint:disable-next-line:typedef
   buscarHospitales( termino: string ) {
-    let url = URL_SERVICIOS + 'busqueda/coleccion/hospitales/' + termino;
+    const url = URL_SERVICIOS + 'busqueda/coleccion/hospitales/' + termino;
     return this.http.get( url )
           .map((resp: any) => resp.hospitales );
     }
 
 
-
+  // tslint:disable-next-line:typedef
   actualizarHospital( hospital: Hospital) {
 
       let url = URL_SERVICIOS + 'hospital/' + hospital._id;
       url += '?token=' + this.token;
       return this.http.put( url, hospital)
                 .map((resp: any) => {
-                    let hospitalDB: Hospital = resp.hospital;
+                    const hospitalDB: Hospital = resp.hospital;
                     this.guardarStorage( hospitalDB._id, this.token, hospitalDB );
-                  swal('Hospital actualizado', hospital.nombre, 'success');
+                    console.log('Hospital actualizado', hospital.nombre, 'success');
 
-                  return true;
+                    return true;
                 });
     }
 
 
 
+  // tslint:disable-next-line:typedef
   borrarHospital( id: string ) {
       let url = URL_SERVICIOS + 'hospital/' + id;
       url += '?token=' + this.token;
       return this.http.delete( url )
           .map( resp => {
-            swal('Hospital borrado', 'El hospital ha sido eliminado correctamente', 'success');
+           console.log('Hospital borrado', 'El hospital ha sido eliminado correctamente', 'success');
+            // tslint:disable-next-line:align
             return true;
             });
 
@@ -112,19 +117,21 @@ export class HospitalService {
 
 
 
+  // tslint:disable-next-line:typedef
   cambiarImagen( archivo: File, id: string) {
     this._subirArchivoService.subirArchivo( archivo, 'hospitales', id)
           .then( (resp: any ) => {
             this.hospital.img = resp.hospital.img;
-            swal('Imagen Actualizada', this.hospital.nombre, 'success');
+            console.log('Imagen Actualizada', this.hospital.nombre, 'success');
             this.guardarStorage( id, this.token, this.hospital);
           })
           .catch( resp => {
             console.log( resp );
           });
   }
+  // tslint:disable-next-line:typedef
   obtenerHospital( id: string) {
-    let url = URL_SERVICIOS + 'hospital/' + id;
+    const url = URL_SERVICIOS + 'hospital/' + id;
     return this.http.get( url )
           .map((resp: any) => resp.hospital );
   }
